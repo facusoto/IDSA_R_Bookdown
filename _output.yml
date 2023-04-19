@@ -1,0 +1,11 @@
+bookdown::bs4_book:
+  default: yes
+  md_extensions: -smart
+  df_print: kable
+  includes:
+    in_header: header.html
+    after_body:
+    - include/script.js
+  css:
+  - include/psyteachr.css
+  - include/style.css

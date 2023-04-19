@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>3 Elementos de probabilidad y estadística | Circular R</title>
+<meta name="author" content="Instituto Data Science Argentina">
+<meta name="generator" content="bookdown 0.33 with bs4_book()">
+<meta property="og:title" content="3 Elementos de probabilidad y estadística | Circular R">
+<meta property="og:type" content="book">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="3 Elementos de probabilidad y estadística | Circular R">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><link rel="shortcut icon" href="images/logos/icon.png">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="include/psyteachr.css">
+<link rel="stylesheet" href="include/style.css">
+<meta name="description" content="Este curso no incluye una introducción sistemática a los conceptos fundamentales de probabilidad y estadística. Te planteamos que si no te sientes cómodo con la parte práctica, busca información...">
+<meta property="og:description" content="Este curso no incluye una introducción sistemática a los conceptos fundamentales de probabilidad y estadística. Te planteamos que si no te sientes cómodo con la parte práctica, busca información...">
+<meta name="twitter:description" content="Este curso no incluye una introducción sistemática a los conceptos fundamentales de probabilidad y estadística. Te planteamos que si no te sientes cómodo con la parte práctica, busca información...">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">Circular R</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Introducción a los algoritmos</a></li>
+<li><a class="" href="dise%C3%B1o-y-construcci%C3%B3n-de-un-almac%C3%A9n-de-datos.html"><span class="header-section-number">2</span> Diseño y construcción de un almacén de datos</a></li>
+<li><a class="active" href="elementos-de-probabilidad-y-estad%C3%ADstica.html"><span class="header-section-number">3</span> Elementos de probabilidad y estadística</a></li>
+<li><a class="" href="series_temporales.html"><span class="header-section-number">4</span> Series temporales</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="elementos-de-probabilidad-y-estadística" class="section level1" number="3">
+<h1>
+<span class="header-section-number">3</span> Elementos de probabilidad y estadística<a class="anchor" aria-label="anchor" href="#elementos-de-probabilidad-y-estad%C3%ADstica"><i class="fas fa-link"></i></a>
+</h1>
+<div class="warning">
+<p>
+Este curso no incluye una introducción sistemática a los conceptos fundamentales de probabilidad y estadística. Te planteamos que si no te sientes cómodo con la parte práctica, busca información adicional en un texto formal de matemáticas o consultalo al profesor.
+Si ya tienes formación formal en probabilidad y estadística, este repaso no es necesario.
+</p>
+</div>
+<div id="observaciones" class="section level2" number="3.1">
+<h2>
+<span class="header-section-number">3.1</span> Observaciones<a class="anchor" aria-label="anchor" href="#observaciones"><i class="fas fa-link"></i></a>
+</h2>
+<p>Antes de comenzar con los temas de probabilidad y estadística, es importante entender lo que significa una observación. En el contexto de la estadística, una observación es una medición o registro de una variable en un evento, objeto o individuo en particular. Por ejemplo, si se está estudiando la altura de las personas, una observación puede ser la altura de una persona en particular, medida en centímetros. Las observaciones pueden tomar diferentes formas, como valores numéricos, códigos o categorías, y pueden ser obtenidas mediante métodos como encuestas, experimentos o mediciones físicas.</p>
+</div>
+<div id="tipos-de-variables" class="section level2" number="3.2">
+<h2>
+<span class="header-section-number">3.2</span> Tipos de variables<a class="anchor" aria-label="anchor" href="#tipos-de-variables"><i class="fas fa-link"></i></a>
+</h2>
+<p>A su vez, las observaciones se dividen en distintas variables respecto a su tipo en cuantitativas y cualitativas.</p>
+<div id="variables-cuantitativas" class="section level3" number="3.2.1">
+<h3>
+<span class="header-section-number">3.2.1</span> Variables cuantitativas<a class="anchor" aria-label="anchor" href="#variables-cuantitativas"><i class="fas fa-link"></i></a>
+</h3>
+<p>Las variables cuantitativas son aquellas que se miden en términos de cantidad o magnitud numérica, y se pueden dividir en dos subtipos: variables continuas y variables discretas.</p>
+<ul>
+<li>Las variables continuas pueden tomar cualquier valor en un intervalo específico, como la altura o el peso de una persona.</li>
+<li>Las variables discretas solo pueden tomar valores enteros, como el número de hijos que tiene una familia o la cantidad de estudiantes en una clase.</li>
+</ul>
+</div>
+<div id="variables-cualitativas" class="section level3" number="3.2.2">
+<h3>
+<span class="header-section-number">3.2.2</span> Variables cualitativas<a class="anchor" aria-label="anchor" href="#variables-cualitativas"><i class="fas fa-link"></i></a>
+</h3>
+<p>Las variables cualitativas, a diferencia, se miden en términos de características o atributos que no pueden ser expresados en términos numéricos. Las variables cualitativas se dividen en dos subtipos: variables nominales y variables ordinales.</p>
+<ul>
+<li>Las variables nominales se refieren a categorías sin un orden inherente, como el color de los ojos o la marca de un automóvil.</li>
+<li>Las variables ordinales, al contrario, tienen un orden inherente, como la escala de calificación de un examen (A, B, C, D, F) o la clasificación socioeconómica de las personas (alta, media, baja).</li>
+</ul>
+</div>
+</div>
+<div id="agrupando-observaciones" class="section level2" number="3.3">
+<h2>
+<span class="header-section-number">3.3</span> Agrupando observaciones<a class="anchor" aria-label="anchor" href="#agrupando-observaciones"><i class="fas fa-link"></i></a>
+</h2>
+<p>Teniendo en cuenta que una observación es simplemente el registro de un evento o medición, ya sea una variable cuantitativa o cualitativa, podemos pasar a ver cómo éstas se organizan dentro del estudio estadístico. El conjunto de todas las observaciones existentes de una variable se denomina <strong>universo</strong> y representa el <em>conjunto completo</em> de datos de interés.</p>
+<p>Es importante tener en cuenta que, en muchos casos, el universo puede ser <em>extremadamente grande o incluso infinito</em>, lo que dificulta medir o analizar todas las observaciones. Es por ello que se utilizan técnicas de muestreo para seleccionar un subconjunto representativo de observaciones del universo.</p>
+<p>A lo largo del curso utilizaremos múltiples <strong>datasets</strong>, que no son más que un grupo de observaciones estructuradas y que analizaremos por medio de distintos medios y herramientas. De estos datasets se utilizarán <strong>muestras</strong>, que son una selección aleatoria o sistemática del universo de observaciones y que utilizaremos para hacer inferencias.</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="33%">
+<col width="33%">
+<col width="33%">
+</colgroup>
+<thead><tr class="header">
+<th align="center">Tipos</th>
+<th align="center">Ejemplo</th>
+<th align="center">Explicación</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="center">Observación</td>
+<td align="center"><img src="images/obs.png"></td>
+<td align="center">Una observación singular</td>
+</tr>
+<tr class="even">
+<td align="center">Universo</td>
+<td align="center"><img src="images/universo.png"></td>
+<td align="center">El conjunto de <em>todas</em> las observaciones posibles, conforman el <em>universo</em>
+</td>
+</tr>
+<tr class="odd">
+<td align="center">Muestra</td>
+<td align="center"><img src="images/muestra.png"></td>
+<td align="center">Un conjunto extraído u obtenido del universo que puede o no ser representativo del mismo</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="tipos-de-estadística" class="section level2" number="3.4">
+<h2>
+<span class="header-section-number">3.4</span> Tipos de estadística<a class="anchor" aria-label="anchor" href="#tipos-de-estad%C3%ADstica"><i class="fas fa-link"></i></a>
+</h2>
+<p>La estadística es una rama de las matemáticas que se encarga de recolectar, analizar e interpretar datos. Su objetivo principal es el de obtener información útil a partir de los datos. En general, la estadística se divide en dos grandes áreas: estadística descriptiva y estadística inferencial.</p>
+<div id="descriptiva" class="section level3" number="3.4.1">
+<h3>
+<span class="header-section-number">3.4.1</span> Descriptiva<a class="anchor" aria-label="anchor" href="#descriptiva"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<p><em>Conozco el universo y quiero describirlo mediante medidas que lo resuman</em></p>
+</blockquote>
+<p>Es la que se encarga de recopilar, organizar, resumir, analizar y presentar los datos obtenidos de una muestra. Explora y describe los datos de manera que se puedan interpretar.</p>
+</div>
+<div id="inferencial" class="section level3" number="3.4.2">
+<h3>
+<span class="header-section-number">3.4.2</span> Inferencial<a class="anchor" aria-label="anchor" href="#inferencial"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<p><em>Conozco una muestra y quiero inferir el universo</em></p>
+</blockquote>
+<p>En algunos casos, la estadística descriptiva por sí sola no es suficiente para obtener las conclusiones que buscamos. En estos casos se puede utilizar la estadística inferencial, es la que se encarga de tomar conclusiones a partir de las muestras. Se utiliza para hacer predicciones sobre los datos a partir de los resultados obtenidos en la muestra.</p>
+</div>
+</div>
+<div id="probabilidad" class="section level2" number="3.5">
+<h2>
+<span class="header-section-number">3.5</span> Probabilidad<a class="anchor" aria-label="anchor" href="#probabilidad"><i class="fas fa-link"></i></a>
+</h2>
+<p>En este curso utilizaremos multiples algoritmos, herramientas y métodos que nos permitirán realizar aproximaciones e información con el uso de la probabilidad, pero primero definamos de que se trata.</p>
+<p>La probabilidad se encarga de estudiar y medir la posibilidad de que un evento o suceso determinado ocurra y sus posibles resultados. En otras palabras, la probabilidad se utiliza para cuantificar la incertidumbre en una situación que involucra varios resultados posibles.</p>
+<p>Se representa numéricamente en una escala del 0 al 1, donde 0 indica que el evento es imposible de suceder y 1 indica que es seguro que ocurra. Todos los otros valores en el intervalo entre 0 y 1 indican diferentes grados de probabilidad, donde valores más cercanos a 1 indican una probabilidad más alta.</p>
+</div>
+<div id="medidas" class="section level2" number="3.6">
+<h2>
+<span class="header-section-number">3.6</span> Medidas<a class="anchor" aria-label="anchor" href="#medidas"><i class="fas fa-link"></i></a>
+</h2>
+<p>Volviendo a la estadística, dentro de esta existen las diferentes medidas que resumen las observaciones en un conjunto que simplifica los datos. Por ejemplo, las medidas de altura de una clase pueden ser promedio, mediana, moda, mínimo y máximo. De esta manera, se puede tener una representación más simple de los datos que permita una mayor comprensión y análisis.</p>
+
+</div>
+</div>
+<script>
+$( document ).ready(function() {
+  var psyteachr = ' <a href="https://institutodatascience.org/"><img src="images/logos/idsa.png" style="height: 45px; color: white;" alt="Instituto Data Science Argentina" /></a>';
+
+  $("footer div.row div:eq(1) p").html(
+    psyteachr
+  );
+
+  // open rdrr links externally
+  $("a[href^='https://rdrr.io']").click(function(){
+    window.open(this.href);
+    return false;
+  });
+
+  // visible second sidebar in mobile
+  function move_sidebar() {
+    var w = window.innerWidth;
+    if (w < 992) {
+      $("#toc").appendTo($("#main-nav"));
+    } else {
+      $("#toc").appendTo($("div.sidebar-chapter"));
+    }
+  }
+  move_sidebar();
+  window.onresize = move_sidebar;
+});
+</script><div class="chapter-nav">
+<div class="prev"><a href="dise%C3%B1o-y-construcci%C3%B3n-de-un-almac%C3%A9n-de-datos.html"><span class="header-section-number">2</span> Diseño y construcción de un almacén de datos</a></div>
+<div class="next"><a href="series_temporales.html"><span class="header-section-number">4</span> Series temporales</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#elementos-de-probabilidad-y-estad%C3%ADstica"><span class="header-section-number">3</span> Elementos de probabilidad y estadística</a></li>
+<li><a class="nav-link" href="#observaciones"><span class="header-section-number">3.1</span> Observaciones</a></li>
+<li>
+<a class="nav-link" href="#tipos-de-variables"><span class="header-section-number">3.2</span> Tipos de variables</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#variables-cuantitativas"><span class="header-section-number">3.2.1</span> Variables cuantitativas</a></li>
+<li><a class="nav-link" href="#variables-cualitativas"><span class="header-section-number">3.2.2</span> Variables cualitativas</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#agrupando-observaciones"><span class="header-section-number">3.3</span> Agrupando observaciones</a></li>
+<li>
+<a class="nav-link" href="#tipos-de-estad%C3%ADstica"><span class="header-section-number">3.4</span> Tipos de estadística</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#descriptiva"><span class="header-section-number">3.4.1</span> Descriptiva</a></li>
+<li><a class="nav-link" href="#inferencial"><span class="header-section-number">3.4.2</span> Inferencial</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#probabilidad"><span class="header-section-number">3.5</span> Probabilidad</a></li>
+<li><a class="nav-link" href="#medidas"><span class="header-section-number">3.6</span> Medidas</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>Circular R</strong>" was written by Instituto Data Science Argentina. It was last built on 2023-04-18.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

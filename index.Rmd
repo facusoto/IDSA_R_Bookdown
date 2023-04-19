@@ -1,17 +1,23 @@
 ---
-title: "A Book"
-author: "Frida Gomam"
+title: "Circular R"
+author: "Instituto Data Science Argentina"
+date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
-output:
-  bookdown::gitbook: default
-  #bookdown::pdf_book: default
+output: bookdown::bs4_book
 ---
 
-# Hello World
+# Introducción a los algoritmos
 
-Hi.
+Acá va ir la futura introducción a los temas (TODO)
 
-Bye.
+## Prueba chunks
+```{r}
+paste("Sample", "text", 1, sep = " ")
+```
+```{r}
+p <- (1:5)
+plot(p)
+```
 
-<!-- If you need PDF output, uncomment bookdown::pdf_book above in YAML. You will need a LaTeX installation, e.g., https://yihui.name/tinytex/ -->
+
