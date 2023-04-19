@@ -15,6 +15,7 @@ descriptiva
 inferencial
 probabilidad
 medidas
+gráficos
 series_temporales
 que-son
 clasificaciones-de-las-series-temporales

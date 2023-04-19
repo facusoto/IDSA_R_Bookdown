@@ -1,0 +1,27 @@
+book_filename: "book.Rmd"
+site: bookdown::bookdown_site
+output_dir: docs
+new_session: yes
+before_chapter_script:
+- R/webex.R
+- R/my_setup.R
+delete_merged_file: yes
+clean: ["packages.bib"]
+language:
+  ui:
+    chapter_name: 'Capítulo '
+  label:
+    fig: 'Figura '
+    tab: 'Tabla '
+    eq: 'Ecuación '
+    thm: 'Teorema '
+    lem: 'Lema '
+    cor: 'Corolario '
+    prp: 'Proposición '
+    cnj: 'Conjetura '
+    def: 'Definición '
+    exm: 'Ejemplo '
+    exr: 'Ejercicio '
+    proof: 'Prueba. '
+    remark: 'Observación. '
+    solution: 'Solución. '

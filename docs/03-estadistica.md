@@ -96,9 +96,9 @@ Los gráficos son herramientas visuales que se utilizan para representar los dat
 
 <div class="info">
 <p>Existe multiplicidad de distintos gráficos disponibles, cada uno de ellos con sus particularidades y ventajas, te dejamos links a continuación para que puedas continuar indagando en ello.</p>
-<a href="https://www.data-to-viz.com/" target="_blank">From data to viz</a>
+<a href="https://www.data-to-viz.com/">From data to viz</a>
 <br>
-<a href="https://r-graph-gallery.com/index.html" target="_blank">The R Graph Gallery</a>
+<a href="https://r-graph-gallery.com/index.html">The R Graph Gallery</a>
 </div>
 
 Ya vimos que son las observaciones, sus tipos, como se agrupan y como a partir de éstas se puede realizar distintas medidas y gráficas. En el siguiente capítulo continuaremos conociendo más elementos y dar incapié a la rama inferencial de la estadística.
