@@ -4,7 +4,7 @@ diseño-y-construcción-de-un-almacén-de-datos
 antecedentes
 resumiendo
 arquitectura-de-un-almacén-de-datos
-elementos-de-probabilidad-y-estadística
+elementos-de-probabilidad-y-estadística---parte-1
 observaciones
 tipos-de-variables
 variables-cuantitativas
@@ -16,6 +16,12 @@ inferencial
 probabilidad
 medidas
 gráficos
+elementos-de-probabilidad-y-estadística---parte-2
+distribuciones-de-probabilidad
+la-distribución-uniforme
+la-distribución-binomial
+la-distribución-normal
+estadistica-inferencial
 series_temporales
 que-son
 clasificaciones-de-las-series-temporales

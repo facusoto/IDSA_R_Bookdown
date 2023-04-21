@@ -4,26 +4,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Capítulo 4 Series temporales | Circular R</title>
+<title>Capítulo 5 Series temporales | Circular R</title>
 <meta name="author" content="Instituto Data Science Argentina">
 <meta name="generator" content="bookdown 0.33 with bs4_book()">
-<meta property="og:title" content="Capítulo 4 Series temporales | Circular R">
+<meta property="og:title" content="Capítulo 5 Series temporales | Circular R">
 <meta property="og:type" content="book">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Capítulo 4 Series temporales | Circular R">
+<meta name="twitter:title" content="Capítulo 5 Series temporales | Circular R">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><link rel="shortcut icon" href="images/logos/icon.png">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
-    
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  </style>
-<link rel="stylesheet" href="include/psyteachr.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="include/psyteachr.css">
 <link rel="stylesheet" href="include/style.css">
-<meta name="description" content="Algoritmo: Categoría: Machine Learning Aprendizaje: Supervizado Objetivo: Predicción Entrada: Variables ordenadas en el tiempo Salida: Valores futuros - Predicción   4.1 ¿Que son? Una serie...">
-<meta property="og:description" content="Algoritmo: Categoría: Machine Learning Aprendizaje: Supervizado Objetivo: Predicción Entrada: Variables ordenadas en el tiempo Salida: Valores futuros - Predicción   4.1 ¿Que son? Una serie...">
-<meta name="twitter:description" content="Algoritmo: Categoría: Machine Learning Aprendizaje: Supervizado Objetivo: Predicción Entrada: Variables ordenadas en el tiempo Salida: Valores futuros - Predicción   4.1 ¿Que son? Una serie...">
+<meta name="description" content="Algoritmo: Categoría: Machine Learning Aprendizaje: Supervizado Objetivo: Predicción Entrada: Variables ordenadas en el tiempo Salida: Valores futuros - Predicción   5.1 ¿Que son? Una serie...">
+<meta property="og:description" content="Algoritmo: Categoría: Machine Learning Aprendizaje: Supervizado Objetivo: Predicción Entrada: Variables ordenadas en el tiempo Salida: Valores futuros - Predicción   5.1 ¿Que son? Una serie...">
+<meta name="twitter:description" content="Algoritmo: Categoría: Machine Learning Aprendizaje: Supervizado Objetivo: Predicción Entrada: Variables ordenadas en el tiempo Salida: Valores futuros - Predicción   5.1 ¿Que son? Una serie...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -40,25 +36,26 @@
 
     <div id="main-nav" class="collapse-lg">
       <form role="search">
-        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+        <input id="search" class="form-control" type="search" placeholder="Buscar" aria-label="Search">
 </form>
 
-      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+      <nav aria-label="Table of contents"><h2>Tabla de contenido</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html"><span class="header-section-number">1</span> Introducción a los algoritmos</a></li>
 <li><a class="" href="dise%C3%B1o-y-construcci%C3%B3n-de-un-almac%C3%A9n-de-datos.html"><span class="header-section-number">2</span> Diseño y construcción de un almacén de datos</a></li>
-<li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica.html"><span class="header-section-number">3</span> Elementos de probabilidad y estadística</a></li>
-<li><a class="active" href="series_temporales.html"><span class="header-section-number">4</span> Series temporales</a></li>
+<li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-1.html"><span class="header-section-number">3</span> Elementos de probabilidad y estadística - Parte 1</a></li>
+<li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-2.html"><span class="header-section-number">4</span> Elementos de probabilidad y estadística - Parte 2</a></li>
+<li><a class="active" href="series_temporales.html"><span class="header-section-number">5</span> Series temporales</a></li>
 </ul>
 
         <div class="book-extra">
-          
+          <p><a id="book-repo" href="https://github.com/facusoto/IDSA_R_Bookdown">Ver código fuente <i class="fab fa-github"></i></a></p>
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="series_temporales" class="section level1" number="4">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="series_temporales" class="section level1" number="5">
 <h1>
-<span class="header-section-number">Capítulo 4</span> Series temporales<a class="anchor" aria-label="anchor" href="#series_temporales"><i class="fas fa-link"></i></a>
+<span class="header-section-number">Capítulo 5</span> Series temporales<a class="anchor" aria-label="anchor" href="#series_temporales"><i class="fas fa-link"></i></a>
 </h1>
 <ul>
 <li>
@@ -80,23 +77,23 @@
 </ul>
 </li>
 </ul>
-<div id="que-son" class="section level2" number="4.1">
+<div id="que-son" class="section level2" number="5.1">
 <h2>
-<span class="header-section-number">4.1</span> ¿Que son?<a class="anchor" aria-label="anchor" href="#que-son"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.1</span> ¿Que son?<a class="anchor" aria-label="anchor" href="#que-son"><i class="fas fa-link"></i></a>
 </h2>
 <p>Una serie temporal es una colección de observaciones de una variable aleatoria tomadas en forma secuencial a medida que transcurre el tiempo.</p>
 <p>Estas mediciones se utilizan para predecir cómo la variable se comportará en el futuro. Por lo tanto, se examina el comportamiento de la serie temporal en el pasado para inferir su comportamiento en el futuro.</p>
 <p>En las series temporales, las observaciones sucesivas están relacionadas entre sí. Por lo tanto, el análisis <em>debe respetar el orden temporal en el que se producen las mediciones</em>. Esto significa que los métodos estadísticos que asumen la independencia de las observaciones <em>no son válidos</em> para el análisis de series temporales, ya que los valores en un momento en el tiempo dependen de los valores de la serie en el pasado.</p>
 <p>El propósito del análisis de series temporales es describir la serie temporal y comprender cómo se comporta a lo largo del tiempo. Esto incluye examinar si la serie temporal presenta una <strong>tendencia creciente</strong>, si hay una <strong>influencia estacional</strong> o si hay <strong>observaciones extrañas</strong>. Esta información se puede utilizar para hacer predicciones sobre el comportamiento futuro de la serie temporal.</p>
 </div>
-<div id="clasificaciones-de-las-series-temporales" class="section level2" number="4.2">
+<div id="clasificaciones-de-las-series-temporales" class="section level2" number="5.2">
 <h2>
-<span class="header-section-number">4.2</span> Clasificaciones de las series temporales<a class="anchor" aria-label="anchor" href="#clasificaciones-de-las-series-temporales"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.2</span> Clasificaciones de las series temporales<a class="anchor" aria-label="anchor" href="#clasificaciones-de-las-series-temporales"><i class="fas fa-link"></i></a>
 </h2>
 <p>Las series temporales se pueden clasificar en cuatro categorías principales: discretas, continuas y determinísticas, estocásticas.</p>
-<div id="de-acuerdo-a-la-frecuencia-de-los-datos" class="section level3" number="4.2.1">
+<div id="de-acuerdo-a-la-frecuencia-de-los-datos" class="section level3" number="5.2.1">
 <h3>
-<span class="header-section-number">4.2.1</span> De acuerdo a la frecuencia de los datos:<a class="anchor" aria-label="anchor" href="#de-acuerdo-a-la-frecuencia-de-los-datos"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.2.1</span> De acuerdo a la frecuencia de los datos:<a class="anchor" aria-label="anchor" href="#de-acuerdo-a-la-frecuencia-de-los-datos"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
@@ -105,9 +102,9 @@
 <strong>Las series continuas</strong>: Tienen un valor para cada momento.</li>
 </ul>
 </div>
-<div id="de-acuerdo-a-la-forma-de-predicción" class="section level3" number="4.2.2">
+<div id="de-acuerdo-a-la-forma-de-predicción" class="section level3" number="5.2.2">
 <h3>
-<span class="header-section-number">4.2.2</span> De acuerdo a la forma de predicción:<a class="anchor" aria-label="anchor" href="#de-acuerdo-a-la-forma-de-predicci%C3%B3n"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.2.2</span> De acuerdo a la forma de predicción:<a class="anchor" aria-label="anchor" href="#de-acuerdo-a-la-forma-de-predicci%C3%B3n"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
@@ -117,9 +114,9 @@
 </ul>
 </div>
 </div>
-<div id="aspectos-de-una-serie-temporal" class="section level2" number="4.3">
+<div id="aspectos-de-una-serie-temporal" class="section level2" number="5.3">
 <h2>
-<span class="header-section-number">4.3</span> Aspectos de una serie temporal<a class="anchor" aria-label="anchor" href="#aspectos-de-una-serie-temporal"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.3</span> Aspectos de una serie temporal<a class="anchor" aria-label="anchor" href="#aspectos-de-una-serie-temporal"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
 <li>
@@ -141,15 +138,15 @@
 <li>
 <strong>Componente Aleatorio</strong>: Es la parte restante de la serie temporal, y se puede tratar de capturar usando un modelo probabilístico para estimar los desvíos en las predicciones.</li>
 </ul>
-<p>&lt;img src="images/st-aleatorio.png</p>
+<p>&lt;img src="images/st-aleatorio.png&gt;</p>
 <blockquote>
 <p>Eventos aleatorios que definen el precio de Bitcoin</p>
 </blockquote>
 <p>De estas tres componentes, las dos primeras, resultan determinísticas mientras que la tercera es estocástica.</p>
 </div>
-<div id="predicción-estocástica" class="section level2" number="4.4">
+<div id="predicción-estocástica" class="section level2" number="5.4">
 <h2>
-<span class="header-section-number">4.4</span> Predicción estocástica<a class="anchor" aria-label="anchor" href="#predicci%C3%B3n-estoc%C3%A1stica"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.4</span> Predicción estocástica<a class="anchor" aria-label="anchor" href="#predicci%C3%B3n-estoc%C3%A1stica"><i class="fas fa-link"></i></a>
 </h2>
 <p>Las series temporales estocásticas serán nuestro enfoque ya que son las que presentan mayor dificultad a la hora de establecer un modelo que permita predecir los valores futuros, para ello se utiliza el modelo ARIMA.</p>
 <ul>
@@ -157,17 +154,17 @@
 <strong>Enfoque ARIMA</strong>: Supone que los datos de la serie temporal que se está intentando pronosticar provienen de <em>un proceso aleatorio o estocástico</em>. Esto significa encontrar <strong>qué proceso generó los datos</strong>, estimar los parámetros relevantes para ese proceso, verificar que las hipótesis sean válidas y luego usar el modelo para predecir el futuro con base en lo observado.</li>
 </ul>
 <p>Para el caso, utilizaremos ARIMA habiendo previamente eliminado / suprimido los aspectos de tendencia y estacionalidad de la serie temporal. Para ello se utilizan distintas herramientas y estrategias.</p>
-<div id="desdiferenciación" class="section level3" number="4.4.1">
+<div id="desdiferenciación" class="section level3" number="5.4.1">
 <h3>
-<span class="header-section-number">4.4.1</span> Des<u>diferencia</u>ción<a class="anchor" aria-label="anchor" href="#desdiferenciaci%C3%B3n"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.4.1</span> Des<u>diferencia</u>ción<a class="anchor" aria-label="anchor" href="#desdiferenciaci%C3%B3n"><i class="fas fa-link"></i></a>
 </h3>
 <p>Diferenciación de la serie se refiere a una técnica usada para intentar eliminar la <strong>tendencia</strong> de una serie temporal. Esto se logra restando el valor en el instante actual <span class="math inline">\(t\)</span> de su valor en el instante anterior, <span class="math inline">\(t-1\)</span>. Esto genera una nueva serie cuyo comportamiento es más predecible y fácilmente analizable ya se ve menos afectada por la tendencia.
 Luego, usando análisis de Fourier podemos encontrar el período que tiene sentido para nuestro problema y desestacionalizarla calculando los promedios a lo largo de toda la serie.</p>
 <div class="inline-figure"><img src="images/st-ddf.gif"></div>
 </div>
-<div id="desestacionalización" class="section level3" number="4.4.2">
+<div id="desestacionalización" class="section level3" number="5.4.2">
 <h3>
-<span class="header-section-number">4.4.2</span> Des<u>estacion</u>alización<a class="anchor" aria-label="anchor" href="#desestacionalizaci%C3%B3n"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5.4.2</span> Des<u>estacion</u>alización<a class="anchor" aria-label="anchor" href="#desestacionalizaci%C3%B3n"><i class="fas fa-link"></i></a>
 </h3>
 <p>Una vez que hemos identificado el período más largo relacionado con nuestro problema (Cada serie tendrá su periodicidad particular), <em>podemos <strong>desestacionalizar</strong> la serie original calculando el promedio a lo largo de toda la serie</em> (por ejemplo semanas).</p>
 <blockquote>
@@ -206,31 +203,32 @@ $( document ).ready(function() {
   window.onresize = move_sidebar;
 });
 </script><div class="chapter-nav">
-<div class="prev"><a href="elementos-de-probabilidad-y-estad%C3%ADstica.html"><span class="header-section-number">3</span> Elementos de probabilidad y estadística</a></div>
+<div class="prev"><a href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-2.html"><span class="header-section-number">4</span> Elementos de probabilidad y estadística - Parte 2</a></div>
 <div class="empty"></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
-    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>Contenido del capítulo</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#series_temporales"><span class="header-section-number">4</span> Series temporales</a></li>
-<li><a class="nav-link" href="#que-son"><span class="header-section-number">4.1</span> ¿Que son?</a></li>
+<li><a class="nav-link" href="#series_temporales"><span class="header-section-number">5</span> Series temporales</a></li>
+<li><a class="nav-link" href="#que-son"><span class="header-section-number">5.1</span> ¿Que son?</a></li>
 <li>
-<a class="nav-link" href="#clasificaciones-de-las-series-temporales"><span class="header-section-number">4.2</span> Clasificaciones de las series temporales</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#de-acuerdo-a-la-frecuencia-de-los-datos"><span class="header-section-number">4.2.1</span> De acuerdo a la frecuencia de los datos:</a></li>
-<li><a class="nav-link" href="#de-acuerdo-a-la-forma-de-predicci%C3%B3n"><span class="header-section-number">4.2.2</span> De acuerdo a la forma de predicción:</a></li>
+<a class="nav-link" href="#clasificaciones-de-las-series-temporales"><span class="header-section-number">5.2</span> Clasificaciones de las series temporales</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#de-acuerdo-a-la-frecuencia-de-los-datos"><span class="header-section-number">5.2.1</span> De acuerdo a la frecuencia de los datos:</a></li>
+<li><a class="nav-link" href="#de-acuerdo-a-la-forma-de-predicci%C3%B3n"><span class="header-section-number">5.2.2</span> De acuerdo a la forma de predicción:</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#aspectos-de-una-serie-temporal"><span class="header-section-number">4.3</span> Aspectos de una serie temporal</a></li>
+<li><a class="nav-link" href="#aspectos-de-una-serie-temporal"><span class="header-section-number">5.3</span> Aspectos de una serie temporal</a></li>
 <li>
-<a class="nav-link" href="#predicci%C3%B3n-estoc%C3%A1stica"><span class="header-section-number">4.4</span> Predicción estocástica</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#desdiferenciaci%C3%B3n"><span class="header-section-number">4.4.1</span> Desdiferenciación</a></li>
-<li><a class="nav-link" href="#desestacionalizaci%C3%B3n"><span class="header-section-number">4.4.2</span> Desestacionalización</a></li>
+<a class="nav-link" href="#predicci%C3%B3n-estoc%C3%A1stica"><span class="header-section-number">5.4</span> Predicción estocástica</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#desdiferenciaci%C3%B3n"><span class="header-section-number">5.4.1</span> Desdiferenciación</a></li>
+<li><a class="nav-link" href="#desestacionalizaci%C3%B3n"><span class="header-section-number">5.4.2</span> Desestacionalización</a></li>
 </ul>
 </li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-          
+<li><a id="book-source" href="https://github.com/facusoto/IDSA_R_Bookdown/blob/master/07-series_temporales.Rmd">Ver código fuente <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/facusoto/IDSA_R_Bookdown/edit/master/07-series_temporales.Rmd">Editar este capítulo <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -242,11 +240,11 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Circular R</strong>" was written by Instituto Data Science Argentina. It was last built on 2023-04-19.</p>
+    <p>"<strong>Circular R</strong>" ha sido escrito por Instituto Data Science Argentina. Última actualización: 2023-04-21.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
-    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+    <p>Este libro fue construido con el paquete <a class="text-light" href="https://bookdown.org">bookdown</a> para R.</p>
   </div>
 
 </div></div>
@@ -255,7 +253,7 @@ $( document ).ready(function() {
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -46,7 +46,7 @@ Las series temporales se pueden clasificar en cuatro categorías principales: di
 
 - **Componente Aleatorio**: Es la parte restante de la serie temporal, y se puede tratar de capturar usando un modelo probabilístico para estimar los desvíos en las predicciones.
 
-<img src="images/st-aleatorio.png
+<img src="images/st-aleatorio.png>
 
 >Eventos aleatorios que definen el precio de Bitcoin
 

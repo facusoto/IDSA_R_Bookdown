@@ -1,7 +1,7 @@
 ---
 title: "Circular R"
 author: "Instituto Data Science Argentina"
-date: "2023-04-19"
+date: "2023-04-21"
 site: bookdown::bookdown_site
 documentclass: book
 output: bookdown::bs4_book

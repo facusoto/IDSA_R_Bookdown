@@ -6,6 +6,8 @@ bookdown::bs4_book:
     in_header: header.html
     after_body:
     - include/script.js
+  repo: https://github.com/facusoto/IDSA_R_Bookdown
   css:
   - include/psyteachr.css
   - include/style.css
+  template: template/bs4_book.html

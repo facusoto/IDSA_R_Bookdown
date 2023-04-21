@@ -1,4 +1,4 @@
-# Elementos de probabilidad y estadística
+# Elementos de probabilidad y estadística - Parte 1
 
 <div class="warning">
 <p>Este curso no incluye una introducción sistemática a los conceptos fundamentales de probabilidad y estadística. Te planteamos que si no te sientes cómodo con la parte práctica, busca información adicional en un texto formal de matemáticas o consultalo al profesor.
@@ -89,6 +89,7 @@ Los gráficos son herramientas visuales que se utilizan para representar los dat
 - **Histograma**: Representa la distribución de los datos por medio de columnas que muestran la frecuencia de los datos, es decir, el número de veces que aparece un valor. Es útil para detectar patrones mediante la distribución.
 
 <img src="images/histograma.png">
+
 >A cuantos mas datos, mejor la representación gráfica.
 
 - **Diagrama de dispersión**: Muestra la relación entre 2 variables numéricas. Donde cada punto de datos representa una observación de ambas variables, el valor de su primera variable se representa en el eje X, el de la segunda en el eje Y.
@@ -96,9 +97,9 @@ Los gráficos son herramientas visuales que se utilizan para representar los dat
 
 <div class="info">
 <p>Existe multiplicidad de distintos gráficos disponibles, cada uno de ellos con sus particularidades y ventajas, te dejamos links a continuación para que puedas continuar indagando en ello.</p>
-<a href="https://www.data-to-viz.com/">From data to viz</a>
+<a href="https://www.data-to-viz.com/" target="_blank">From data to viz</a>
 <br>
-<a href="https://r-graph-gallery.com/index.html">The R Graph Gallery</a>
+<a href="https://r-graph-gallery.com/index.html" target="_blank">The R Graph Gallery</a>
 </div>
 
 Ya vimos que son las observaciones, sus tipos, como se agrupan y como a partir de éstas se puede realizar distintas medidas y gráficas. En el siguiente capítulo continuaremos conociendo más elementos y dar incapié a la rama inferencial de la estadística.
