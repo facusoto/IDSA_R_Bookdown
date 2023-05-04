@@ -19,5 +19,3 @@ paste("Sample", "text", 1, sep = " ")
 p <- (1:5)
 plot(p)
 ```
-
-

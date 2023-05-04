@@ -4,13 +4,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Capítulo 1 Introducción a los algoritmos | Circular R</title>
+<title>Capítulo 6 Algoritmos de agrupamiento | Circular R</title>
 <meta name="author" content="Instituto Data Science Argentina">
 <meta name="generator" content="bookdown 0.33 with bs4_book()">
-<meta property="og:title" content="Capítulo 1 Introducción a los algoritmos | Circular R">
+<meta property="og:title" content="Capítulo 6 Algoritmos de agrupamiento | Circular R">
 <meta property="og:type" content="book">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Capítulo 1 Introducción a los algoritmos | Circular R">
+<meta name="twitter:title" content="Capítulo 6 Algoritmos de agrupamiento | Circular R">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -18,9 +18,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="include/psyteachr.css">
 <link rel="stylesheet" href="include/webex.css">
 <link rel="stylesheet" href="include/style.css">
-<meta name="description" content="A book created with bookdown.">
-<meta property="og:description" content="A book created with bookdown.">
-<meta name="twitter:description" content="A book created with bookdown.">
+<meta name="description" content="Algoritmo: Categoría: Machine Learning Funcionamiento: No supervisado Objetivo: Agrupamiento Entrada: Variables categóricas o regresivas Salida: Conjuntos de grupos   Antes de comenzar con el...">
+<meta property="og:description" content="Algoritmo: Categoría: Machine Learning Funcionamiento: No supervisado Objetivo: Agrupamiento Entrada: Variables categóricas o regresivas Salida: Conjuntos de grupos   Antes de comenzar con el...">
+<meta name="twitter:description" content="Algoritmo: Categoría: Machine Learning Funcionamiento: No supervisado Objetivo: Agrupamiento Entrada: Variables categóricas o regresivas Salida: Conjuntos de grupos   Antes de comenzar con el...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -42,12 +42,12 @@
 
       <nav aria-label="Table of contents"><h2>Tabla de contenido</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="active" href="index.html"><span class="header-section-number">1</span> Introducción a los algoritmos</a></li>
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Introducción a los algoritmos</a></li>
 <li><a class="" href="dise%C3%B1o-y-construcci%C3%B3n-de-un-almac%C3%A9n-de-datos.html"><span class="header-section-number">2</span> Diseño y construcción de un almacén de datos</a></li>
 <li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-1.html"><span class="header-section-number">3</span> Elementos de probabilidad y estadística - Parte 1</a></li>
 <li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-2.html"><span class="header-section-number">4</span> Elementos de probabilidad y estadística - Parte 2</a></li>
 <li><a class="" href="%C3%A1rboles-de-decisi%C3%B3n.html"><span class="header-section-number">5</span> Árboles de decisión</a></li>
-<li><a class="" href="algoritmos-de-agrupamiento.html"><span class="header-section-number">6</span> Algoritmos de agrupamiento</a></li>
+<li><a class="active" href="algoritmos-de-agrupamiento.html"><span class="header-section-number">6</span> Algoritmos de agrupamiento</a></li>
 <li><a class="" href="reglas-de-asociaci%C3%B3n.html"><span class="header-section-number">7</span> Reglas de asociación</a></li>
 <li><a class="" href="series_temporales.html"><span class="header-section-number">8</span> Series temporales</a></li>
 </ul>
@@ -57,23 +57,114 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><!--bookdown:title:end--><!--bookdown:title:start--><div id="introducción-a-los-algoritmos" class="section level1" number="1">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="algoritmos-de-agrupamiento" class="section level1" number="6">
 <h1>
-<span class="header-section-number">Capítulo 1</span> Introducción a los algoritmos<a class="anchor" aria-label="anchor" href="#introducci%C3%B3n-a-los-algoritmos"><i class="fas fa-link"></i></a>
+<span class="header-section-number">Capítulo 6</span> Algoritmos de agrupamiento<a class="anchor" aria-label="anchor" href="#algoritmos-de-agrupamiento"><i class="fas fa-link"></i></a>
 </h1>
-<p>Acá va ir la futura introducción a los temas (TODO)</p>
-<div id="prueba-chunks" class="section level2" number="1.1">
+<ul>
+<li>
+<h3 id="algoritmo-1">Algoritmo:</h3>
+<ul>
+<li>
+<em>Categoría</em>: Machine Learning</li>
+<li>
+<em>Funcionamiento</em>: No supervisado</li>
+<li>
+<em>Objetivo</em>: Agrupamiento
+<ul>
+<li>
+<em>Entrada</em>: Variables categóricas o regresivas</li>
+<li>
+<em>Salida</em>: Conjuntos de grupos</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="warning">
+<p>
+Antes de comenzar con el estudio y práctica de algoritmos te recomendamos leer el capítulo de introducción a los algoritmos
+</p>
+</div>
+<div id="qué-son" class="section level2" number="6.1">
 <h2>
-<span class="header-section-number">1.1</span> Prueba chunks<a class="anchor" aria-label="anchor" href="#prueba-chunks"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.1</span> ¿Qué son?<a class="anchor" aria-label="anchor" href="#qu%C3%A9-son"><i class="fas fa-link"></i></a>
 </h2>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"Sample"</span>, <span class="st">"text"</span>, <span class="fl">1</span>, sep <span class="op">=</span> <span class="st">" "</span><span class="op">)</span></span></code></pre></div>
-<pre><code>## [1] "Sample text 1"</code></pre>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">p</span><span class="op">)</span></span></code></pre></div>
-<div class="inline-figure"><img src="index_files/figure-html/unnamed-chunk-2-1.png" width="672"></div>
+<p>Los algoritmos de agrupamiento, también conocidos como <strong>clustering</strong> en inglés, son técnicas que permiten agrupar un conjunto de puntos (observaciones) distribuidos en un espacio de varias dimensiones. Estos puntos son agrupados de acuerdo a criterios de proximidad, que pueden variar dependiendo de la métrica utilizada para definir dicha proximidad, algunas de las métricas más comunes son la euclídea y la matriz de correlación.</p>
+<p>El objetivo de estas técnicas es obtener grupos de observaciones que compartan características o atributos similares y que, a su vez, estos grupos se diferencien entre sí. Los grupos obtenidos permiten describir e identificar patrones y estructuras del conjunto de datos complejo.</p>
+<div class="info">
+<p>
+Es importante destacar que estas técnicas de clustering funcionan sin supervisión y <u>no poseen poder predictivo alguno</u>. Es decir, no buscan encontrar relaciones entre variables descriptivas y una variable objetivo (o etiqueta), sino que se enfocan en encontrar similitudes entre los datos sin tener una variable objetivo de referencia.
+</p>
+</div>
+</div>
+<div id="criterios-de-proximidad" class="section level2" number="6.2">
+<h2>
+<span class="header-section-number">6.2</span> Criterios de proximidad<a class="anchor" aria-label="anchor" href="#criterios-de-proximidad"><i class="fas fa-link"></i></a>
+</h2>
+<p>Cuando se habla de criterios de proximidad en algoritmos de agrupamiento, se refiere a la medida en que los objetos del conjunto de datos están cerca entre sí. La proximidad se puede medir de diversas formas, y esto depende del tipo de datos que se esté analizando y del objetivo del análisis.</p>
+<p>En el caso de datos que se pueden representar en un espacio dimensional, la proximidad física puede medirse mediante la distancia euclidiana, la cual mide la distancia entre dos puntos en un espacio de n dimensiones.</p>
+<p>Sin embargo, en algunos casos, los atributos en común pueden ser una mejor medida de proximidad. Es decir, dos objetos pueden considerarse cercanos en función de su similitud en ciertas características, incluso si no están cerca físicamente en el espacio de características.</p>
+<p>Podemos dividir los algoritmos de agrupamiento en dos grandes tipos, el agrupamiento jerárquico y el no jerárquico.</p>
+</div>
+<div id="agrupamiento-jerárquico" class="section level2" number="6.3">
+<h2>
+<span class="header-section-number">6.3</span> Agrupamiento jerárquico<a class="anchor" aria-label="anchor" href="#agrupamiento-jer%C3%A1rquico"><i class="fas fa-link"></i></a>
+</h2>
+<p>En el clustering jerárquico se apunta a agrupar los datos en forma de árbol (también conocido como dendrograma). Este árbol puede ser formado tanto por la aglomeración como la división de las observaciones.</p>
+<div id="aglomerativos-bottom-up" class="section level3" number="6.3.1">
+<h3>
+<span class="header-section-number">6.3.1</span> Aglomerativos (bottom up)<a class="anchor" aria-label="anchor" href="#aglomerativos-bottom-up"><i class="fas fa-link"></i></a>
+</h3>
+<p>En este caso se comienza considerando a cada punto como un grupo separado y, en cada paso, los grupos más similares se fusionan hasta que se obtiene un solo grupo. El resultado final es una jerarquía de grupos en forma de árbol que pueden ser interpretados a diferentes niveles de agregación.</p>
+<div class="inline-figure"><img src="images/aparition.gif"></div>
+</div>
+<div id="de-división-top-down" class="section level3" number="6.3.2">
+<h3>
+<span class="header-section-number">6.3.2</span> De división (top down)<a class="anchor" aria-label="anchor" href="#de-divisi%C3%B3n-top-down"><i class="fas fa-link"></i></a>
+</h3>
+<p>Este caso podría decirse que es el inverso, se comienza utilizando el conjunto entero de observaciones y se va subdividiendo hasta llegar a elementos individuales.</p>
+<div class="inline-figure"><img src="images/reversed.gif"></div>
+</div>
+</div>
+<div id="agrupamiento-no-jerárquico" class="section level2" number="6.4">
+<h2>
+<span class="header-section-number">6.4</span> Agrupamiento no jerárquico<a class="anchor" aria-label="anchor" href="#agrupamiento-no-jer%C3%A1rquico"><i class="fas fa-link"></i></a>
+</h2>
+<p>En los agrupamientos no jerárquicos, el operador decide el número de divisiones. Se agrupan las observaciones según su cercanía, buscando grupos heterogéneos pero con elementos homogéneos en su interior.</p>
+<div class="warning">
+<p>
+Aunque en ocasiones no son muy robustos en cuanto a los resultados que ofrecen, su uso está muy extendido, especialmente el método k-medias (o k-means).
+</p>
+</div>
+<div id="k-means" class="section level3" number="6.4.1">
+<h3>
+<span class="header-section-number">6.4.1</span> K-means<a class="anchor" aria-label="anchor" href="#k-means"><i class="fas fa-link"></i></a>
+</h3>
+<p>El objetivo de k-means es agrupar puntos de datos similares en un número de clústeres predefinido por el usuario. El proceso se realiza en varias iteraciones hasta que se llega a un punto donde los clusters se estabilizan y no cambian más.</p>
+<p>El algoritmo funciona midiendo la distancia entre cada punto de datos en un espacio n-dimensional. Cuanto más cerca estén dos puntos de datos, más similares serán y cuanto más alejados, menos similares.</p>
+<div class="inline-figure"><img src="images/k-groups.png"></div>
+<blockquote>
+<p>Para ejemplificar el procedimiento utilizaremos un set de datos simple. Los datos se representan como círculos blancos ubicados en un espacio de dos dimensiones, también se discierne 3 grupos de datos distintos.</p>
+</blockquote>
+<p>El algoritmo utiliza <em>centroides</em> que son simplemente un término para referirse al centro de un cluster. Por lo tanto, el número de centroides corresponderá al número de clusters que se creen.</p>
+<p>En la primera iteración del algoritmo se colocan los centroides en posiciones aleatorias del espacio de datos. A partir de ahí cada punto de datos se asignará al centroide más cercano, lo que crea los grupos iniciales.</p>
+<div class="inline-figure"><img src="images/output.gif"></div>
+<blockquote>
+<p>Aquí se puede ver los centroides asignados en lugares aleatorios del espacio (Los círculos de mayor tamaño) y como los datos son asignados a un grupo al tomar el color del centroide.</p>
+</blockquote>
+<p>En la siguiente fase, se calcula el centro del grupo y se mueven los centroides hacia allí. Tras moverse los centroides, se reasignarán los puntos de datos a los nuevos centroides más cercanos y se repite el proceso hasta que los centroides ya no se muevan y los grupos se estabilizan.</p>
+<div class="inline-figure"><img src="images/c.png"></div>
+<blockquote>
+<p>Como se puede ver, los centroides se aproximaron a los diferentes grupos de datos</p>
+</blockquote>
+<div class="info">
+<p>
+Estos gráficos fueron creados utilizando la herramienta de visualización de k-means de <a href="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/" target="_blank"> NaftaliHarris</a>
+</p>
+</div>
 
+</div>
 </div>
 </div>
 <script>
@@ -273,19 +364,29 @@ window.onload = function() {
 }
 
 </script><div class="chapter-nav">
-<div class="empty"></div>
-<div class="next"><a href="dise%C3%B1o-y-construcci%C3%B3n-de-un-almac%C3%A9n-de-datos.html"><span class="header-section-number">2</span> Diseño y construcción de un almacén de datos</a></div>
+<div class="prev"><a href="%C3%A1rboles-de-decisi%C3%B3n.html"><span class="header-section-number">5</span> Árboles de decisión</a></div>
+<div class="next"><a href="reglas-de-asociaci%C3%B3n.html"><span class="header-section-number">7</span> Reglas de asociación</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>Contenido del capítulo</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#introducci%C3%B3n-a-los-algoritmos"><span class="header-section-number">1</span> Introducción a los algoritmos</a></li>
-<li><a class="nav-link" href="#prueba-chunks"><span class="header-section-number">1.1</span> Prueba chunks</a></li>
+<li><a class="nav-link" href="#algoritmos-de-agrupamiento"><span class="header-section-number">6</span> Algoritmos de agrupamiento</a></li>
+<li><a class="nav-link" href="#qu%C3%A9-son"><span class="header-section-number">6.1</span> ¿Qué son?</a></li>
+<li><a class="nav-link" href="#criterios-de-proximidad"><span class="header-section-number">6.2</span> Criterios de proximidad</a></li>
+<li>
+<a class="nav-link" href="#agrupamiento-jer%C3%A1rquico"><span class="header-section-number">6.3</span> Agrupamiento jerárquico</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#aglomerativos-bottom-up"><span class="header-section-number">6.3.1</span> Aglomerativos (bottom up)</a></li>
+<li><a class="nav-link" href="#de-divisi%C3%B3n-top-down"><span class="header-section-number">6.3.2</span> De división (top down)</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#agrupamiento-no-jer%C3%A1rquico"><span class="header-section-number">6.4</span> Agrupamiento no jerárquico</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#k-means"><span class="header-section-number">6.4.1</span> K-means</a></li></ul>
+</li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/facusoto/IDSA_R_Bookdown/blob/master/index.Rmd">Ver código fuente <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/facusoto/IDSA_R_Bookdown/edit/master/index.Rmd">Editar este capítulo <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/facusoto/IDSA_R_Bookdown/blob/master/06-agrupamiento.Rmd">Ver código fuente <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/facusoto/IDSA_R_Bookdown/edit/master/06-agrupamiento.Rmd">Editar este capítulo <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>

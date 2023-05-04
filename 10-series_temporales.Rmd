@@ -2,7 +2,7 @@
 
 - ### Algoritmo:
 	- *Categoría*: Machine Learning
-	- *Aprendizaje*: Supervizado
+	- *Aprendizaje*: Supervisado
 	- *Objetivo*: Predicción
 		- *Entrada*: Variables ordenadas en el tiempo
 		- *Salida*: Valores futuros - Predicción

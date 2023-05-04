@@ -4,22 +4,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Capítulo 5 Series temporales | Circular R</title>
+<title>Capítulo 8 Series temporales | Circular R</title>
 <meta name="author" content="Instituto Data Science Argentina">
 <meta name="generator" content="bookdown 0.33 with bs4_book()">
-<meta property="og:title" content="Capítulo 5 Series temporales | Circular R">
+<meta property="og:title" content="Capítulo 8 Series temporales | Circular R">
 <meta property="og:type" content="book">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Capítulo 5 Series temporales | Circular R">
+<meta name="twitter:title" content="Capítulo 8 Series temporales | Circular R">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><link rel="shortcut icon" href="images/logos/icon.png">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="include/psyteachr.css">
+<link rel="stylesheet" href="include/webex.css">
 <link rel="stylesheet" href="include/style.css">
-<meta name="description" content="Algoritmo: Categoría: Machine Learning Aprendizaje: Supervizado Objetivo: Predicción Entrada: Variables ordenadas en el tiempo Salida: Valores futuros - Predicción   5.1 ¿Que son? Una serie...">
-<meta property="og:description" content="Algoritmo: Categoría: Machine Learning Aprendizaje: Supervizado Objetivo: Predicción Entrada: Variables ordenadas en el tiempo Salida: Valores futuros - Predicción   5.1 ¿Que son? Una serie...">
-<meta name="twitter:description" content="Algoritmo: Categoría: Machine Learning Aprendizaje: Supervizado Objetivo: Predicción Entrada: Variables ordenadas en el tiempo Salida: Valores futuros - Predicción   5.1 ¿Que son? Una serie...">
+<meta name="description" content="Algoritmo: Categoría: Machine Learning Aprendizaje: Supervisado Objetivo: Predicción Entrada: Variables ordenadas en el tiempo Salida: Valores futuros - Predicción   8.1 ¿Que son? Una serie...">
+<meta property="og:description" content="Algoritmo: Categoría: Machine Learning Aprendizaje: Supervisado Objetivo: Predicción Entrada: Variables ordenadas en el tiempo Salida: Valores futuros - Predicción   8.1 ¿Que son? Una serie...">
+<meta name="twitter:description" content="Algoritmo: Categoría: Machine Learning Aprendizaje: Supervisado Objetivo: Predicción Entrada: Variables ordenadas en el tiempo Salida: Valores futuros - Predicción   8.1 ¿Que son? Una serie...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -45,7 +46,10 @@
 <li><a class="" href="dise%C3%B1o-y-construcci%C3%B3n-de-un-almac%C3%A9n-de-datos.html"><span class="header-section-number">2</span> Diseño y construcción de un almacén de datos</a></li>
 <li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-1.html"><span class="header-section-number">3</span> Elementos de probabilidad y estadística - Parte 1</a></li>
 <li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-2.html"><span class="header-section-number">4</span> Elementos de probabilidad y estadística - Parte 2</a></li>
-<li><a class="active" href="series_temporales.html"><span class="header-section-number">5</span> Series temporales</a></li>
+<li><a class="" href="%C3%A1rboles-de-decisi%C3%B3n.html"><span class="header-section-number">5</span> Árboles de decisión</a></li>
+<li><a class="" href="algoritmos-de-agrupamiento.html"><span class="header-section-number">6</span> Algoritmos de agrupamiento</a></li>
+<li><a class="" href="reglas-de-asociaci%C3%B3n.html"><span class="header-section-number">7</span> Reglas de asociación</a></li>
+<li><a class="active" href="series_temporales.html"><span class="header-section-number">8</span> Series temporales</a></li>
 </ul>
 
         <div class="book-extra">
@@ -53,18 +57,18 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="series_temporales" class="section level1" number="5">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="series_temporales" class="section level1" number="8">
 <h1>
-<span class="header-section-number">Capítulo 5</span> Series temporales<a class="anchor" aria-label="anchor" href="#series_temporales"><i class="fas fa-link"></i></a>
+<span class="header-section-number">Capítulo 8</span> Series temporales<a class="anchor" aria-label="anchor" href="#series_temporales"><i class="fas fa-link"></i></a>
 </h1>
 <ul>
 <li>
-<h3 id="algoritmo">Algoritmo:</h3>
+<h3 id="algoritmo-3">Algoritmo:</h3>
 <ul>
 <li>
 <em>Categoría</em>: Machine Learning</li>
 <li>
-<em>Aprendizaje</em>: Supervizado</li>
+<em>Aprendizaje</em>: Supervisado</li>
 <li>
 <em>Objetivo</em>: Predicción
 <ul>
@@ -77,23 +81,23 @@
 </ul>
 </li>
 </ul>
-<div id="que-son" class="section level2" number="5.1">
+<div id="que-son-1" class="section level2" number="8.1">
 <h2>
-<span class="header-section-number">5.1</span> ¿Que son?<a class="anchor" aria-label="anchor" href="#que-son"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.1</span> ¿Que son?<a class="anchor" aria-label="anchor" href="#que-son-1"><i class="fas fa-link"></i></a>
 </h2>
 <p>Una serie temporal es una colección de observaciones de una variable aleatoria tomadas en forma secuencial a medida que transcurre el tiempo.</p>
 <p>Estas mediciones se utilizan para predecir cómo la variable se comportará en el futuro. Por lo tanto, se examina el comportamiento de la serie temporal en el pasado para inferir su comportamiento en el futuro.</p>
 <p>En las series temporales, las observaciones sucesivas están relacionadas entre sí. Por lo tanto, el análisis <em>debe respetar el orden temporal en el que se producen las mediciones</em>. Esto significa que los métodos estadísticos que asumen la independencia de las observaciones <em>no son válidos</em> para el análisis de series temporales, ya que los valores en un momento en el tiempo dependen de los valores de la serie en el pasado.</p>
 <p>El propósito del análisis de series temporales es describir la serie temporal y comprender cómo se comporta a lo largo del tiempo. Esto incluye examinar si la serie temporal presenta una <strong>tendencia creciente</strong>, si hay una <strong>influencia estacional</strong> o si hay <strong>observaciones extrañas</strong>. Esta información se puede utilizar para hacer predicciones sobre el comportamiento futuro de la serie temporal.</p>
 </div>
-<div id="clasificaciones-de-las-series-temporales" class="section level2" number="5.2">
+<div id="clasificaciones-de-las-series-temporales" class="section level2" number="8.2">
 <h2>
-<span class="header-section-number">5.2</span> Clasificaciones de las series temporales<a class="anchor" aria-label="anchor" href="#clasificaciones-de-las-series-temporales"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2</span> Clasificaciones de las series temporales<a class="anchor" aria-label="anchor" href="#clasificaciones-de-las-series-temporales"><i class="fas fa-link"></i></a>
 </h2>
 <p>Las series temporales se pueden clasificar en cuatro categorías principales: discretas, continuas y determinísticas, estocásticas.</p>
-<div id="de-acuerdo-a-la-frecuencia-de-los-datos" class="section level3" number="5.2.1">
+<div id="de-acuerdo-a-la-frecuencia-de-los-datos" class="section level3" number="8.2.1">
 <h3>
-<span class="header-section-number">5.2.1</span> De acuerdo a la frecuencia de los datos:<a class="anchor" aria-label="anchor" href="#de-acuerdo-a-la-frecuencia-de-los-datos"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2.1</span> De acuerdo a la frecuencia de los datos:<a class="anchor" aria-label="anchor" href="#de-acuerdo-a-la-frecuencia-de-los-datos"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
@@ -102,9 +106,9 @@
 <strong>Las series continuas</strong>: Tienen un valor para cada momento.</li>
 </ul>
 </div>
-<div id="de-acuerdo-a-la-forma-de-predicción" class="section level3" number="5.2.2">
+<div id="de-acuerdo-a-la-forma-de-predicción" class="section level3" number="8.2.2">
 <h3>
-<span class="header-section-number">5.2.2</span> De acuerdo a la forma de predicción:<a class="anchor" aria-label="anchor" href="#de-acuerdo-a-la-forma-de-predicci%C3%B3n"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2.2</span> De acuerdo a la forma de predicción:<a class="anchor" aria-label="anchor" href="#de-acuerdo-a-la-forma-de-predicci%C3%B3n"><i class="fas fa-link"></i></a>
 </h3>
 <ul>
 <li>
@@ -114,9 +118,9 @@
 </ul>
 </div>
 </div>
-<div id="aspectos-de-una-serie-temporal" class="section level2" number="5.3">
+<div id="aspectos-de-una-serie-temporal" class="section level2" number="8.3">
 <h2>
-<span class="header-section-number">5.3</span> Aspectos de una serie temporal<a class="anchor" aria-label="anchor" href="#aspectos-de-una-serie-temporal"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.3</span> Aspectos de una serie temporal<a class="anchor" aria-label="anchor" href="#aspectos-de-una-serie-temporal"><i class="fas fa-link"></i></a>
 </h2>
 <ul>
 <li>
@@ -144,9 +148,9 @@
 </blockquote>
 <p>De estas tres componentes, las dos primeras, resultan determinísticas mientras que la tercera es estocástica.</p>
 </div>
-<div id="predicción-estocástica" class="section level2" number="5.4">
+<div id="predicción-estocástica" class="section level2" number="8.4">
 <h2>
-<span class="header-section-number">5.4</span> Predicción estocástica<a class="anchor" aria-label="anchor" href="#predicci%C3%B3n-estoc%C3%A1stica"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4</span> Predicción estocástica<a class="anchor" aria-label="anchor" href="#predicci%C3%B3n-estoc%C3%A1stica"><i class="fas fa-link"></i></a>
 </h2>
 <p>Las series temporales estocásticas serán nuestro enfoque ya que son las que presentan mayor dificultad a la hora de establecer un modelo que permita predecir los valores futuros, para ello se utiliza el modelo ARIMA.</p>
 <ul>
@@ -154,17 +158,17 @@
 <strong>Enfoque ARIMA</strong>: Supone que los datos de la serie temporal que se está intentando pronosticar provienen de <em>un proceso aleatorio o estocástico</em>. Esto significa encontrar <strong>qué proceso generó los datos</strong>, estimar los parámetros relevantes para ese proceso, verificar que las hipótesis sean válidas y luego usar el modelo para predecir el futuro con base en lo observado.</li>
 </ul>
 <p>Para el caso, utilizaremos ARIMA habiendo previamente eliminado / suprimido los aspectos de tendencia y estacionalidad de la serie temporal. Para ello se utilizan distintas herramientas y estrategias.</p>
-<div id="desdiferenciación" class="section level3" number="5.4.1">
+<div id="desdiferenciación" class="section level3" number="8.4.1">
 <h3>
-<span class="header-section-number">5.4.1</span> Des<u>diferencia</u>ción<a class="anchor" aria-label="anchor" href="#desdiferenciaci%C3%B3n"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4.1</span> Des<u>diferencia</u>ción<a class="anchor" aria-label="anchor" href="#desdiferenciaci%C3%B3n"><i class="fas fa-link"></i></a>
 </h3>
 <p>Diferenciación de la serie se refiere a una técnica usada para intentar eliminar la <strong>tendencia</strong> de una serie temporal. Esto se logra restando el valor en el instante actual <span class="math inline">\(t\)</span> de su valor en el instante anterior, <span class="math inline">\(t-1\)</span>. Esto genera una nueva serie cuyo comportamiento es más predecible y fácilmente analizable ya se ve menos afectada por la tendencia.
 Luego, usando análisis de Fourier podemos encontrar el período que tiene sentido para nuestro problema y desestacionalizarla calculando los promedios a lo largo de toda la serie.</p>
 <div class="inline-figure"><img src="images/st-ddf.gif"></div>
 </div>
-<div id="desestacionalización" class="section level3" number="5.4.2">
+<div id="desestacionalización" class="section level3" number="8.4.2">
 <h3>
-<span class="header-section-number">5.4.2</span> Des<u>estacion</u>alización<a class="anchor" aria-label="anchor" href="#desestacionalizaci%C3%B3n"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4.2</span> Des<u>estacion</u>alización<a class="anchor" aria-label="anchor" href="#desestacionalizaci%C3%B3n"><i class="fas fa-link"></i></a>
 </h3>
 <p>Una vez que hemos identificado el período más largo relacionado con nuestro problema (Cada serie tendrá su periodicidad particular), <em>podemos <strong>desestacionalizar</strong> la serie original calculando el promedio a lo largo de toda la serie</em> (por ejemplo semanas).</p>
 <blockquote>
@@ -178,7 +182,7 @@ Luego, usando análisis de Fourier podemos encontrar el período que tiene senti
 </div>
 <script>
 $( document ).ready(function() {
-  var psyteachr = ' <a href="https://institutodatascience.org/"><img src="images/logos/idsa.png" style="height: 45px; color: white;" alt="Instituto Data Science Argentina" /></a>';
+  var psyteachr = ' <a href="https://institutodatascience.org/" target="_blank"><img src="images/logos/idsa.png" style="height: 45px; color: white;" alt="Instituto Data Science Argentina" /></a>';
 
   $("footer div.row div:eq(1) p").html(
     psyteachr
@@ -202,33 +206,203 @@ $( document ).ready(function() {
   move_sidebar();
   window.onresize = move_sidebar;
 });
+</script><script>
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  if (t = document.getElementById("webex-total_correct")) {
+    var correct = document.getElementsByClassName("webex-correct").length;
+    var solvemes = document.getElementsByClassName("webex-solveme").length;
+    var radiogroups = document.getElementsByClassName("webex-radiogroup").length;
+    var selects = document.getElementsByClassName("webex-select").length;
+    
+    t.innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+  
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+  
+  var cl = this.classList
+  
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+  
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+  
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+  
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+  
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+  }
+  
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+  
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+  }
+
+  update_total_correct();
+}
+
 </script><div class="chapter-nav">
-<div class="prev"><a href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-2.html"><span class="header-section-number">4</span> Elementos de probabilidad y estadística - Parte 2</a></div>
+<div class="prev"><a href="reglas-de-asociaci%C3%B3n.html"><span class="header-section-number">7</span> Reglas de asociación</a></div>
 <div class="empty"></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>Contenido del capítulo</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#series_temporales"><span class="header-section-number">5</span> Series temporales</a></li>
-<li><a class="nav-link" href="#que-son"><span class="header-section-number">5.1</span> ¿Que son?</a></li>
+<li><a class="nav-link" href="#series_temporales"><span class="header-section-number">8</span> Series temporales</a></li>
+<li><a class="nav-link" href="#que-son-1"><span class="header-section-number">8.1</span> ¿Que son?</a></li>
 <li>
-<a class="nav-link" href="#clasificaciones-de-las-series-temporales"><span class="header-section-number">5.2</span> Clasificaciones de las series temporales</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#de-acuerdo-a-la-frecuencia-de-los-datos"><span class="header-section-number">5.2.1</span> De acuerdo a la frecuencia de los datos:</a></li>
-<li><a class="nav-link" href="#de-acuerdo-a-la-forma-de-predicci%C3%B3n"><span class="header-section-number">5.2.2</span> De acuerdo a la forma de predicción:</a></li>
+<a class="nav-link" href="#clasificaciones-de-las-series-temporales"><span class="header-section-number">8.2</span> Clasificaciones de las series temporales</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#de-acuerdo-a-la-frecuencia-de-los-datos"><span class="header-section-number">8.2.1</span> De acuerdo a la frecuencia de los datos:</a></li>
+<li><a class="nav-link" href="#de-acuerdo-a-la-forma-de-predicci%C3%B3n"><span class="header-section-number">8.2.2</span> De acuerdo a la forma de predicción:</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#aspectos-de-una-serie-temporal"><span class="header-section-number">5.3</span> Aspectos de una serie temporal</a></li>
+<li><a class="nav-link" href="#aspectos-de-una-serie-temporal"><span class="header-section-number">8.3</span> Aspectos de una serie temporal</a></li>
 <li>
-<a class="nav-link" href="#predicci%C3%B3n-estoc%C3%A1stica"><span class="header-section-number">5.4</span> Predicción estocástica</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#desdiferenciaci%C3%B3n"><span class="header-section-number">5.4.1</span> Desdiferenciación</a></li>
-<li><a class="nav-link" href="#desestacionalizaci%C3%B3n"><span class="header-section-number">5.4.2</span> Desestacionalización</a></li>
+<a class="nav-link" href="#predicci%C3%B3n-estoc%C3%A1stica"><span class="header-section-number">8.4</span> Predicción estocástica</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#desdiferenciaci%C3%B3n"><span class="header-section-number">8.4.1</span> Desdiferenciación</a></li>
+<li><a class="nav-link" href="#desestacionalizaci%C3%B3n"><span class="header-section-number">8.4.2</span> Desestacionalización</a></li>
 </ul>
 </li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/facusoto/IDSA_R_Bookdown/blob/master/07-series_temporales.Rmd">Ver código fuente <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/facusoto/IDSA_R_Bookdown/edit/master/07-series_temporales.Rmd">Editar este capítulo <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/facusoto/IDSA_R_Bookdown/blob/master/10-series_temporales.Rmd">Ver código fuente <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/facusoto/IDSA_R_Bookdown/edit/master/10-series_temporales.Rmd">Editar este capítulo <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -240,7 +414,7 @@ $( document ).ready(function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Circular R</strong>" ha sido escrito por Instituto Data Science Argentina. Última actualización: 2023-04-21.</p>
+    <p>"<strong>Circular R</strong>" ha sido escrito por Instituto Data Science Argentina. Última actualización: 2023-05-03.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

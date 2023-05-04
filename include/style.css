@@ -1,3 +1,7 @@
 .inline-figure > img {
     width: inherit;
 }
+
+.MJXc-display {
+    margin: 2em 0!important;
+}

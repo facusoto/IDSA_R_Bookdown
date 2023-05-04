@@ -1,6 +1,6 @@
 <script>
 $( document ).ready(function() {
-  var psyteachr = ' <a href="https://institutodatascience.org/"><img src="images/logos/idsa.png" style="height: 45px; color: white;" alt="Instituto Data Science Argentina" /></a>';
+  var psyteachr = ' <a href="https://institutodatascience.org/" target="_blank"><img src="images/logos/idsa.png" style="height: 45px; color: white;" alt="Instituto Data Science Argentina" /></a>';
 
   $("footer div.row div:eq(1) p").html(
     psyteachr

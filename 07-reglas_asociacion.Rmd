@@ -1,0 +1,92 @@
+# Reglas de asociación
+
+- ### Algoritmo:
+	- *Categoría*: Machine Learning
+	- *Aprendizaje*: Supervisado y No supervisado
+	- *Objetivo*: Descubrimiento de asociaciones
+		- *Entrada*: Variables categóricas
+		- *Salida*: Reglas de asociación
+
+<div class="warning">
+<p>Antes de comenzar con el estudio y práctica de algoritmos te recomendamos leer el capítulo de introducción a los algoritmos</p>
+</div>
+
+## ¿Qué son?
+
+Las reglas de asociación son una técnica en el análisis de datos que se utiliza para identificar patrones y relaciones entre distintos atributos de un conjunto de datos, es especialmente útil en el análisis de grandes conjuntos de datos transaccionales.
+
+Las reglas de asociación generalmente toman la forma de "si ocurre A, entonces es probable que también ocurra B" donde A y B son atributos. Por ejemplo, "Si un cliente compra pan, es probable que también compre manteca".
+
+Las reglas de asociación se forman a partir de la frecuencia con la que se observan *grupos de atributos juntos en los datos*. Es decir, si un conjunto de atributos aparecen juntos con frecuencia en los datos, se considera que hay una relación entre ellos. Por ejemplo, si en un supermercado se observa que los clientes que compran pañales también compran cerveza con frecuencia, se puede establecer una regla de asociación que diga "si un cliente compra pañales, entonces es probable que también compre cerveza".
+
+Para descubrir estas reglas, se utiliza un algoritmo llamado **Apriori**, que es capaz de buscar conjuntos de atributos que se producen con frecuencia en el conjunto de datos mediante el uso de las medidas de cobertura y confianza, de las que vamos a desarrollar a continuación
+
+## Conceptos
+
+Antes de continuar con el funcionamiento del algoritmo veamos algunos conceptos asociados.
+
+### Hands
+
+Es importante comprender que en reglas de asociación se nombra de distinto modo a cada parte de la relación. Las reglas del tipo “si X entonces Y” se pueden expresar a modo de fórmula, como aparece a continuación:
+
+$$X \Rightarrow Y$$
+
+Tal que podemos hablar de "lados de la flecha", donde en el lado izquierdo de la regla recibe el nombre de antecedente o **left-hand-side (LHS**) y el lado derecho el nombre de consecuente o **right-hand-side (RHS)**.
+
+Entonces dentro de una regla del tipo:
+
+>"Si un cliente compra leche y pan, entonces es probable que también compre manteca"
+
+Identificamos a "compra de leche" y "compra de pan" como `r mcq(c(answer = "antecedente", "consecuente"))` y a "compra de manteca" como `r mcq(c("antecedente", answer = "consecuente"))`
+
+### Cobertura o soporte
+
+Una de las medidas principales que utiliza el algoritmo Apriori es la de *cobertura*, que se refiere a la frecuencia con la que se observa un conjunto de atributos juntos en el conjunto de datos.
+
+La cobertura se mide como la proporción de casos observados del antecedente (el conjunto de atributos en la parte izquierda de la regla) dividido entre el total de casos. El resultado es un número entre cero y uno, donde uno indica que todos los casos cumplen la regla, se intentará encontrar conjuntos de atributos donde su cobertura sea lo más alta posible
+
+$$\Large{\frac{\text{Casos que cumplen la regla}}{\text{Casos totales}}}$$
+
+<div class="warning">
+<p>Es importante tener en cuenta que la cobertura puede variar entre el conjunto de entrenamiento y el conjunto de validación si no se han aleatorizado adecuadamente los valores, lo que puede llevar a resultados incorrectos.</p>
+</div>
+
+### Confianza
+  
+En muchas ocasiones la aparición de ciertos conjuntos de atributos en un conjunto de datos puede estar relacionada con la presencia de otros conjuntos de atributos. La relación entre estos conjuntos puede ser cuantificada a través de la confianza, que es otra medida utilizada en el algoritmo Apriori para identificar reglas de asociación.
+
+La confianza mide la proporción de casos en los que se observa el consecuente (el atributo en la parte derecha de la regla) dado que se observa el antecedente (el conjunto de atributos en la parte izquierda de la regla). Esta proporción se calcula dividiendo los casos que posean tanto el _antecedente y el consecuente_ entre los que **solo** posean el _antecedente_.. El resultado es un número entre cero y uno, un alto valor de confianza indica que si el antecedente está presente, es probable que también lo esté el consecuente.
+
+$$\Large\text{Confianza} = \frac{\text{soporte(Casos antecedente y consecuente)}}{\text{Casos antecedente}}$$
+
+### Lift
+
+Otro procedimiento importante al generar reglas de asociación es asegurar la veracidad de nuestras reglas. El lift compara la frecuencia observada de una regla con la frecuencia esperada simplemente por el azar. Esto nos permitirá determinar si la regla existe realmente o no. El resultado será un número que, cuanto más se aleje de 1, mayor será la evidencia de que la regla es un patrón real.
+
+### Matriz de interés
+
+La matriz de interés es una importante herramienta para el análisis de las reglas que hayamos generado, ya que permite determinar la correlación entre el antecedente y el consecuente de una regla al hacer una serie de preguntas sobre la relación entre ambas partes en diferentes escenarios.
+
+Se trata de una tabla que muestra la frecuencia con la que se cumplen las cuatro posibles combinaciones de la presencia o ausencia del antecedente y del consecuente. Estas combinaciones son:
+
+-   Antecedente y consecuente presentes
+-   Antecedente presente y consecuente ausente
+-   Antecedente ausente y consecuente presente
+-   Antecedente y consecuente ausentes
+
+Para cada combinación, se calcula el número de veces que ocurre en el conjunto de datos. Esto permite determinar si existe una correlación entre la presencia o ausencia del antecedente y del consecuente.
+
+## Apriori
+
+El algoritmo Apriori comienza buscando conjuntos de elementos que ocurren con una frecuencia mayor o igual a un valor de umbral predefinido. Este umbral es el soporte mínimo y lo establece el usuario antes de ejecutar el algoritmo.
+
+COMPLETAR
+
+
+## Casos de uso
+
+Las reglas de asociación se utilizan para generar, reconocer y aprender nuevos patrones a modo de regla (Recordando una regla como "si A y B se cumplen, entonces C también se cumple"), por ejemplo:
+
+- **Sistemas de recomendación:** A través del comportamiento previo de los usuarios se puede deducir qué productos recomendarles a los próximos.
+- **Sistemas de contratación:** Aplicar distintas estrategias para obtener atributos de los aplicantes a modo de seleccionar los que posean aquellas características más deseables.
+- **Supermercados:** Se utiliza para generar cercanía física entre los productos que se compran normalmente juntos y maximizar sus ventas.
