@@ -4,13 +4,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Capítulo 7 Reglas de asociación | Circular R</title>
+<title>Capítulo 8 Reglas de asociación | Circular R</title>
 <meta name="author" content="Instituto Data Science Argentina">
 <meta name="generator" content="bookdown 0.33 with bs4_book()">
-<meta property="og:title" content="Capítulo 7 Reglas de asociación | Circular R">
+<meta property="og:title" content="Capítulo 8 Reglas de asociación | Circular R">
 <meta property="og:type" content="book">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Capítulo 7 Reglas de asociación | Circular R">
+<meta name="twitter:title" content="Capítulo 8 Reglas de asociación | Circular R">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -42,14 +42,16 @@
 
       <nav aria-label="Table of contents"><h2>Tabla de contenido</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html"><span class="header-section-number">1</span> Introducción a los algoritmos</a></li>
-<li><a class="" href="dise%C3%B1o-y-construcci%C3%B3n-de-un-almac%C3%A9n-de-datos.html"><span class="header-section-number">2</span> Diseño y construcción de un almacén de datos</a></li>
-<li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-1.html"><span class="header-section-number">3</span> Elementos de probabilidad y estadística - Parte 1</a></li>
-<li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-2.html"><span class="header-section-number">4</span> Elementos de probabilidad y estadística - Parte 2</a></li>
-<li><a class="" href="%C3%A1rboles-de-decisi%C3%B3n.html"><span class="header-section-number">5</span> Árboles de decisión</a></li>
-<li><a class="" href="algoritmos-de-agrupamiento.html"><span class="header-section-number">6</span> Algoritmos de agrupamiento</a></li>
-<li><a class="active" href="reglas-de-asociaci%C3%B3n.html"><span class="header-section-number">7</span> Reglas de asociación</a></li>
-<li><a class="" href="series_temporales.html"><span class="header-section-number">8</span> Series temporales</a></li>
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Te damos la bienvenida</a></li>
+<li><a class="" href="introducci%C3%B3n-a-los-algoritmos.html"><span class="header-section-number">2</span> Introducción a los algoritmos</a></li>
+<li><a class="" href="dise%C3%B1o-y-construcci%C3%B3n-de-un-almac%C3%A9n-de-datos.html"><span class="header-section-number">3</span> Diseño y construcción de un almacén de datos</a></li>
+<li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-1.html"><span class="header-section-number">4</span> Elementos de probabilidad y estadística - Parte 1</a></li>
+<li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-2.html"><span class="header-section-number">5</span> Elementos de probabilidad y estadística - Parte 2</a></li>
+<li><a class="" href="%C3%A1rboles-de-decisi%C3%B3n.html"><span class="header-section-number">6</span> Árboles de decisión</a></li>
+<li><a class="" href="algoritmos-de-agrupamiento.html"><span class="header-section-number">7</span> Algoritmos de agrupamiento</a></li>
+<li><a class="active" href="reglas-de-asociaci%C3%B3n.html"><span class="header-section-number">8</span> Reglas de asociación</a></li>
+<li><a class="" href="redes-neuronales.html"><span class="header-section-number">9</span> Redes neuronales</a></li>
+<li><a class="" href="series_temporales.html"><span class="header-section-number">10</span> Series temporales</a></li>
 </ul>
 
         <div class="book-extra">
@@ -57,9 +59,9 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="reglas-de-asociación" class="section level1" number="7">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="reglas-de-asociación" class="section level1" number="8">
 <h1>
-<span class="header-section-number">Capítulo 7</span> Reglas de asociación<a class="anchor" aria-label="anchor" href="#reglas-de-asociaci%C3%B3n"><i class="fas fa-link"></i></a>
+<span class="header-section-number">Capítulo 8</span> Reglas de asociación<a class="anchor" aria-label="anchor" href="#reglas-de-asociaci%C3%B3n"><i class="fas fa-link"></i></a>
 </h1>
 <ul>
 <li>
@@ -83,26 +85,26 @@
 </ul>
 <div class="warning">
 <p>
-Antes de comenzar con el estudio y práctica de algoritmos te recomendamos leer el capítulo de introducción a los algoritmos
+Antes de comenzar con el estudio y práctica de algoritmos te recomendamos leer el capítulo de <a href="introducci%C3%B3n-a-los-algoritmos.html#introducci%C3%B3n-a-los-algoritmos">introducción a los algoritmos</a>
 </p>
 </div>
-<div id="qué-son-1" class="section level2" number="7.1">
+<div id="qué-son-1" class="section level2" number="8.1">
 <h2>
-<span class="header-section-number">7.1</span> ¿Qué son?<a class="anchor" aria-label="anchor" href="#qu%C3%A9-son-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.1</span> ¿Qué son?<a class="anchor" aria-label="anchor" href="#qu%C3%A9-son-1"><i class="fas fa-link"></i></a>
 </h2>
 <p>Las reglas de asociación son una técnica en el análisis de datos que se utiliza para identificar patrones y relaciones entre distintos atributos de un conjunto de datos, es especialmente útil en el análisis de grandes conjuntos de datos transaccionales.</p>
 <p>Las reglas de asociación generalmente toman la forma de "si ocurre A, entonces es probable que también ocurra B" donde A y B son atributos. Por ejemplo, "Si un cliente compra pan, es probable que también compre manteca".</p>
 <p>Las reglas de asociación se forman a partir de la frecuencia con la que se observan <em>grupos de atributos juntos en los datos</em>. Es decir, si un conjunto de atributos aparecen juntos con frecuencia en los datos, se considera que hay una relación entre ellos. Por ejemplo, si en un supermercado se observa que los clientes que compran pañales también compran cerveza con frecuencia, se puede establecer una regla de asociación que diga "si un cliente compra pañales, entonces es probable que también compre cerveza".</p>
 <p>Para descubrir estas reglas, se utiliza un algoritmo llamado <strong>Apriori</strong>, que es capaz de buscar conjuntos de atributos que se producen con frecuencia en el conjunto de datos mediante el uso de las medidas de cobertura y confianza, de las que vamos a desarrollar a continuación</p>
 </div>
-<div id="conceptos" class="section level2" number="7.2">
+<div id="conceptos" class="section level2" number="8.2">
 <h2>
-<span class="header-section-number">7.2</span> Conceptos<a class="anchor" aria-label="anchor" href="#conceptos"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2</span> Conceptos<a class="anchor" aria-label="anchor" href="#conceptos"><i class="fas fa-link"></i></a>
 </h2>
 <p>Antes de continuar con el funcionamiento del algoritmo veamos algunos conceptos asociados.</p>
-<div id="hands" class="section level3" number="7.2.1">
+<div id="hands" class="section level3" number="8.2.1">
 <h3>
-<span class="header-section-number">7.2.1</span> Hands<a class="anchor" aria-label="anchor" href="#hands"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2.1</span> Hands<a class="anchor" aria-label="anchor" href="#hands"><i class="fas fa-link"></i></a>
 </h3>
 <p>Es importante comprender que en reglas de asociación se nombra de distinto modo a cada parte de la relación. Las reglas del tipo “si X entonces Y” se pueden expresar a modo de fórmula, como aparece a continuación:</p>
 <p><span class="math display">\[X \Rightarrow Y\]</span></p>
@@ -117,9 +119,9 @@ Antes de comenzar con el estudio y práctica de algoritmos te recomendamos leer 
 <option value="">antecedente</option>
 <option value="answer">consecuente</option></select></p>
 </div>
-<div id="cobertura-o-soporte" class="section level3" number="7.2.2">
+<div id="cobertura-o-soporte" class="section level3" number="8.2.2">
 <h3>
-<span class="header-section-number">7.2.2</span> Cobertura o soporte<a class="anchor" aria-label="anchor" href="#cobertura-o-soporte"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2.2</span> Cobertura o soporte<a class="anchor" aria-label="anchor" href="#cobertura-o-soporte"><i class="fas fa-link"></i></a>
 </h3>
 <p>Una de las medidas principales que utiliza el algoritmo Apriori es la de <em>cobertura</em>, que se refiere a la frecuencia con la que se observa un conjunto de atributos juntos en el conjunto de datos.</p>
 <p>La cobertura se mide como la proporción de casos observados del antecedente (el conjunto de atributos en la parte izquierda de la regla) dividido entre el total de casos. El resultado es un número entre cero y uno, donde uno indica que todos los casos cumplen la regla, se intentará encontrar conjuntos de atributos donde su cobertura sea lo más alta posible</p>
@@ -130,23 +132,23 @@ Es importante tener en cuenta que la cobertura puede variar entre el conjunto de
 </p>
 </div>
 </div>
-<div id="confianza" class="section level3" number="7.2.3">
+<div id="confianza" class="section level3" number="8.2.3">
 <h3>
-<span class="header-section-number">7.2.3</span> Confianza<a class="anchor" aria-label="anchor" href="#confianza"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2.3</span> Confianza<a class="anchor" aria-label="anchor" href="#confianza"><i class="fas fa-link"></i></a>
 </h3>
 <p>En muchas ocasiones la aparición de ciertos conjuntos de atributos en un conjunto de datos puede estar relacionada con la presencia de otros conjuntos de atributos. La relación entre estos conjuntos puede ser cuantificada a través de la confianza, que es otra medida utilizada en el algoritmo Apriori para identificar reglas de asociación.</p>
 <p>La confianza mide la proporción de casos en los que se observa el consecuente (el atributo en la parte derecha de la regla) dado que se observa el antecedente (el conjunto de atributos en la parte izquierda de la regla). Esta proporción se calcula dividiendo los casos que posean tanto el <em>antecedente y el consecuente</em> entre los que <strong>solo</strong> posean el <em>antecedente</em>.. El resultado es un número entre cero y uno, un alto valor de confianza indica que si el antecedente está presente, es probable que también lo esté el consecuente.</p>
 <p><span class="math display">\[\Large\text{Confianza} = \frac{\text{soporte(Casos antecedente y consecuente)}}{\text{Casos antecedente}}\]</span></p>
 </div>
-<div id="lift" class="section level3" number="7.2.4">
+<div id="lift" class="section level3" number="8.2.4">
 <h3>
-<span class="header-section-number">7.2.4</span> Lift<a class="anchor" aria-label="anchor" href="#lift"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2.4</span> Lift<a class="anchor" aria-label="anchor" href="#lift"><i class="fas fa-link"></i></a>
 </h3>
 <p>Otro procedimiento importante al generar reglas de asociación es asegurar la veracidad de nuestras reglas. El lift compara la frecuencia observada de una regla con la frecuencia esperada simplemente por el azar. Esto nos permitirá determinar si la regla existe realmente o no. El resultado será un número que, cuanto más se aleje de 1, mayor será la evidencia de que la regla es un patrón real.</p>
 </div>
-<div id="matriz-de-interés" class="section level3" number="7.2.5">
+<div id="matriz-de-interés" class="section level3" number="8.2.5">
 <h3>
-<span class="header-section-number">7.2.5</span> Matriz de interés<a class="anchor" aria-label="anchor" href="#matriz-de-inter%C3%A9s"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2.5</span> Matriz de interés<a class="anchor" aria-label="anchor" href="#matriz-de-inter%C3%A9s"><i class="fas fa-link"></i></a>
 </h3>
 <p>La matriz de interés es una importante herramienta para el análisis de las reglas que hayamos generado, ya que permite determinar la correlación entre el antecedente y el consecuente de una regla al hacer una serie de preguntas sobre la relación entre ambas partes en diferentes escenarios.</p>
 <p>Se trata de una tabla que muestra la frecuencia con la que se cumplen las cuatro posibles combinaciones de la presencia o ausencia del antecedente y del consecuente. Estas combinaciones son:</p>
@@ -159,16 +161,16 @@ Es importante tener en cuenta que la cobertura puede variar entre el conjunto de
 <p>Para cada combinación, se calcula el número de veces que ocurre en el conjunto de datos. Esto permite determinar si existe una correlación entre la presencia o ausencia del antecedente y del consecuente.</p>
 </div>
 </div>
-<div id="apriori" class="section level2" number="7.3">
+<div id="apriori" class="section level2" number="8.3">
 <h2>
-<span class="header-section-number">7.3</span> Apriori<a class="anchor" aria-label="anchor" href="#apriori"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.3</span> Apriori<a class="anchor" aria-label="anchor" href="#apriori"><i class="fas fa-link"></i></a>
 </h2>
 <p>El algoritmo Apriori comienza buscando conjuntos de elementos que ocurren con una frecuencia mayor o igual a un valor de umbral predefinido. Este umbral es el soporte mínimo y lo establece el usuario antes de ejecutar el algoritmo.</p>
 <p>COMPLETAR</p>
 </div>
-<div id="casos-de-uso" class="section level2" number="7.4">
+<div id="casos-de-uso" class="section level2" number="8.4">
 <h2>
-<span class="header-section-number">7.4</span> Casos de uso<a class="anchor" aria-label="anchor" href="#casos-de-uso"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.4</span> Casos de uso<a class="anchor" aria-label="anchor" href="#casos-de-uso"><i class="fas fa-link"></i></a>
 </h2>
 <p>Las reglas de asociación se utilizan para generar, reconocer y aprender nuevos patrones a modo de regla (Recordando una regla como "si A y B se cumplen, entonces C también se cumple"), por ejemplo:</p>
 <ul>
@@ -378,24 +380,24 @@ window.onload = function() {
 }
 
 </script><div class="chapter-nav">
-<div class="prev"><a href="algoritmos-de-agrupamiento.html"><span class="header-section-number">6</span> Algoritmos de agrupamiento</a></div>
-<div class="next"><a href="series_temporales.html"><span class="header-section-number">8</span> Series temporales</a></div>
+<div class="prev"><a href="algoritmos-de-agrupamiento.html"><span class="header-section-number">7</span> Algoritmos de agrupamiento</a></div>
+<div class="next"><a href="redes-neuronales.html"><span class="header-section-number">9</span> Redes neuronales</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>Contenido del capítulo</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#reglas-de-asociaci%C3%B3n"><span class="header-section-number">7</span> Reglas de asociación</a></li>
-<li><a class="nav-link" href="#qu%C3%A9-son-1"><span class="header-section-number">7.1</span> ¿Qué son?</a></li>
+<li><a class="nav-link" href="#reglas-de-asociaci%C3%B3n"><span class="header-section-number">8</span> Reglas de asociación</a></li>
+<li><a class="nav-link" href="#qu%C3%A9-son-1"><span class="header-section-number">8.1</span> ¿Qué son?</a></li>
 <li>
-<a class="nav-link" href="#conceptos"><span class="header-section-number">7.2</span> Conceptos</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#hands"><span class="header-section-number">7.2.1</span> Hands</a></li>
-<li><a class="nav-link" href="#cobertura-o-soporte"><span class="header-section-number">7.2.2</span> Cobertura o soporte</a></li>
-<li><a class="nav-link" href="#confianza"><span class="header-section-number">7.2.3</span> Confianza</a></li>
-<li><a class="nav-link" href="#lift"><span class="header-section-number">7.2.4</span> Lift</a></li>
-<li><a class="nav-link" href="#matriz-de-inter%C3%A9s"><span class="header-section-number">7.2.5</span> Matriz de interés</a></li>
+<a class="nav-link" href="#conceptos"><span class="header-section-number">8.2</span> Conceptos</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#hands"><span class="header-section-number">8.2.1</span> Hands</a></li>
+<li><a class="nav-link" href="#cobertura-o-soporte"><span class="header-section-number">8.2.2</span> Cobertura o soporte</a></li>
+<li><a class="nav-link" href="#confianza"><span class="header-section-number">8.2.3</span> Confianza</a></li>
+<li><a class="nav-link" href="#lift"><span class="header-section-number">8.2.4</span> Lift</a></li>
+<li><a class="nav-link" href="#matriz-de-inter%C3%A9s"><span class="header-section-number">8.2.5</span> Matriz de interés</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#apriori"><span class="header-section-number">7.3</span> Apriori</a></li>
-<li><a class="nav-link" href="#casos-de-uso"><span class="header-section-number">7.4</span> Casos de uso</a></li>
+<li><a class="nav-link" href="#apriori"><span class="header-section-number">8.3</span> Apriori</a></li>
+<li><a class="nav-link" href="#casos-de-uso"><span class="header-section-number">8.4</span> Casos de uso</a></li>
 </ul>
 
       <div class="book-extra">
@@ -413,7 +415,7 @@ window.onload = function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Circular R</strong>" ha sido escrito por Instituto Data Science Argentina. Última actualización: 2023-05-03.</p>
+    <p>"<strong>Circular R</strong>" ha sido escrito por Instituto Data Science Argentina. Última actualización: 2023-05-06.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

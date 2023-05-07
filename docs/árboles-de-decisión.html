@@ -4,13 +4,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Capítulo 5 Árboles de decisión | Circular R</title>
+<title>Capítulo 6 Árboles de decisión | Circular R</title>
 <meta name="author" content="Instituto Data Science Argentina">
 <meta name="generator" content="bookdown 0.33 with bs4_book()">
-<meta property="og:title" content="Capítulo 5 Árboles de decisión | Circular R">
+<meta property="og:title" content="Capítulo 6 Árboles de decisión | Circular R">
 <meta property="og:type" content="book">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Capítulo 5 Árboles de decisión | Circular R">
+<meta name="twitter:title" content="Capítulo 6 Árboles de decisión | Circular R">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -42,14 +42,16 @@
 
       <nav aria-label="Table of contents"><h2>Tabla de contenido</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html"><span class="header-section-number">1</span> Introducción a los algoritmos</a></li>
-<li><a class="" href="dise%C3%B1o-y-construcci%C3%B3n-de-un-almac%C3%A9n-de-datos.html"><span class="header-section-number">2</span> Diseño y construcción de un almacén de datos</a></li>
-<li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-1.html"><span class="header-section-number">3</span> Elementos de probabilidad y estadística - Parte 1</a></li>
-<li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-2.html"><span class="header-section-number">4</span> Elementos de probabilidad y estadística - Parte 2</a></li>
-<li><a class="active" href="%C3%A1rboles-de-decisi%C3%B3n.html"><span class="header-section-number">5</span> Árboles de decisión</a></li>
-<li><a class="" href="algoritmos-de-agrupamiento.html"><span class="header-section-number">6</span> Algoritmos de agrupamiento</a></li>
-<li><a class="" href="reglas-de-asociaci%C3%B3n.html"><span class="header-section-number">7</span> Reglas de asociación</a></li>
-<li><a class="" href="series_temporales.html"><span class="header-section-number">8</span> Series temporales</a></li>
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Te damos la bienvenida</a></li>
+<li><a class="" href="introducci%C3%B3n-a-los-algoritmos.html"><span class="header-section-number">2</span> Introducción a los algoritmos</a></li>
+<li><a class="" href="dise%C3%B1o-y-construcci%C3%B3n-de-un-almac%C3%A9n-de-datos.html"><span class="header-section-number">3</span> Diseño y construcción de un almacén de datos</a></li>
+<li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-1.html"><span class="header-section-number">4</span> Elementos de probabilidad y estadística - Parte 1</a></li>
+<li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-2.html"><span class="header-section-number">5</span> Elementos de probabilidad y estadística - Parte 2</a></li>
+<li><a class="active" href="%C3%A1rboles-de-decisi%C3%B3n.html"><span class="header-section-number">6</span> Árboles de decisión</a></li>
+<li><a class="" href="algoritmos-de-agrupamiento.html"><span class="header-section-number">7</span> Algoritmos de agrupamiento</a></li>
+<li><a class="" href="reglas-de-asociaci%C3%B3n.html"><span class="header-section-number">8</span> Reglas de asociación</a></li>
+<li><a class="" href="redes-neuronales.html"><span class="header-section-number">9</span> Redes neuronales</a></li>
+<li><a class="" href="series_temporales.html"><span class="header-section-number">10</span> Series temporales</a></li>
 </ul>
 
         <div class="book-extra">
@@ -57,9 +59,9 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="árboles-de-decisión" class="section level1" number="5">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="árboles-de-decisión" class="section level1" number="6">
 <h1>
-<span class="header-section-number">Capítulo 5</span> Árboles de decisión<a class="anchor" aria-label="anchor" href="#%C3%A1rboles-de-decisi%C3%B3n"><i class="fas fa-link"></i></a>
+<span class="header-section-number">Capítulo 6</span> Árboles de decisión<a class="anchor" aria-label="anchor" href="#%C3%A1rboles-de-decisi%C3%B3n"><i class="fas fa-link"></i></a>
 </h1>
 <ul>
 <li>
@@ -83,12 +85,12 @@
 </ul>
 <div class="warning">
 <p>
-Antes de comenzar con el estudio y práctica de algoritmos te recomendamos leer el capítulo de introducción a los algoritmos
+Antes de comenzar con el estudio y práctica de algoritmos te recomendamos leer el capítulo de <a href="introducci%C3%B3n-a-los-algoritmos.html#introducci%C3%B3n-a-los-algoritmos">introducción a los algoritmos</a>
 </p>
 </div>
-<div id="que-son" class="section level2" number="5.1">
+<div id="que-son" class="section level2" number="6.1">
 <h2>
-<span class="header-section-number">5.1</span> ¿Que son?<a class="anchor" aria-label="anchor" href="#que-son"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.1</span> ¿Que son?<a class="anchor" aria-label="anchor" href="#que-son"><i class="fas fa-link"></i></a>
 </h2>
 <p>Los árboles de decisión son una herramienta útil para detectar patrones y obtener conocimiento a partir de un conjunto de datos. El proceso consiste en tener un conjunto de datos de N observaciones que están definidas por M atributos, donde cada observación tiene un <u>resultado de pertenencia</u> (su etiqueta). El objetivo es <em>aprender a predecir</em> este resultado de pertenencia a partir de los atributos presentes.</p>
 <div class="inline-figure"><img src="images/at_ad.png"></div>
@@ -103,41 +105,41 @@ Es un algoritmo muy noble, ya que permite tanto la entrada como salida de variab
 </p>
 </div>
 </div>
-<div id="partes-del-árbol" class="section level2" number="5.2">
+<div id="partes-del-árbol" class="section level2" number="6.2">
 <h2>
-<span class="header-section-number">5.2</span> Partes del árbol<a class="anchor" aria-label="anchor" href="#partes-del-%C3%A1rbol"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.2</span> Partes del árbol<a class="anchor" aria-label="anchor" href="#partes-del-%C3%A1rbol"><i class="fas fa-link"></i></a>
 </h2>
 <p>La construcción de árboles de decisión consiste en ir partiendo el conjunto de observaciones en forma sucesiva. Cada división la vamos a llamar <strong>nodo</strong>. Cuando un nodo no conduzca a nuevas divisiones se denomina <strong>hoja</strong>, pero hasta entonces estos nodos también son considerados como <strong>ramas</strong> del árbol (ya que conducen a distintos nodos del árbol)</p>
 <div class="inline-figure"><img src="images/divisiones_arbol.png"></div>
 </div>
-<div id="partes-del-árbol-1" class="section level2" number="5.3">
+<div id="partes-del-árbol-1" class="section level2" number="6.3">
 <h2>
-<span class="header-section-number">5.3</span> Partes del árbol<a class="anchor" aria-label="anchor" href="#partes-del-%C3%A1rbol-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.3</span> Partes del árbol<a class="anchor" aria-label="anchor" href="#partes-del-%C3%A1rbol-1"><i class="fas fa-link"></i></a>
 </h2>
 <p>La construcción de árboles de decisión consiste en ir partiendo el conjunto de observaciones en forma sucesiva. Cada división la vamos a llamar <strong>nodo</strong>. Cuando un nodo no conduzca a nuevas divisiones se denomina <strong>hoja</strong>, pero hasta entonces estos nodos también son considerados como <strong>ramas</strong> del árbol (ya que conducen a distintos nodos del árbol)</p>
 <div class="inline-figure"><img src="images/diagrama_arbol.png"></div>
 </div>
-<div id="las-métricas-de-decisión" class="section level2" number="5.4">
+<div id="las-métricas-de-decisión" class="section level2" number="6.4">
 <h2>
-<span class="header-section-number">5.4</span> Las métricas de decisión<a class="anchor" aria-label="anchor" href="#las-m%C3%A9tricas-de-decisi%C3%B3n"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.4</span> Las métricas de decisión<a class="anchor" aria-label="anchor" href="#las-m%C3%A9tricas-de-decisi%C3%B3n"><i class="fas fa-link"></i></a>
 </h2>
 <p>Para lograr evaluar los atributos y tomar decisiones el algoritmo realiza distintas métricas, este se plantea "preguntas" (es decir evalúa atributos) en cada uno de los niveles del árbol y aplica una división que asegure mayor pureza a cada nodo que crea. Algunas de las métricas que utiliza para este fin son:</p>
-<div id="ganancia-de-información" class="section level3" number="5.4.1">
+<div id="ganancia-de-información" class="section level3" number="6.4.1">
 <h3>
-<span class="header-section-number">5.4.1</span> Ganancia de información<a class="anchor" aria-label="anchor" href="#ganancia-de-informaci%C3%B3n"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.4.1</span> Ganancia de información<a class="anchor" aria-label="anchor" href="#ganancia-de-informaci%C3%B3n"><i class="fas fa-link"></i></a>
 </h3>
 <p>La ganancia de información es una métrica que mide cuanto aumenta el nivel de certeza luego de la división, es decir mide la diferencia de entropía antes y después de la división. Podemos pensar en la ganancia de información y a la entropía (aleatoriedad) como opuestos, donde si el nivel de entropía baja la ganancia de información o certeza aumenta.</p>
 </div>
-<div id="impureza-del-nodo" class="section level3" number="5.4.2">
+<div id="impureza-del-nodo" class="section level3" number="6.4.2">
 <h3>
-<span class="header-section-number">5.4.2</span> Impureza del nodo<a class="anchor" aria-label="anchor" href="#impureza-del-nodo"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.4.2</span> Impureza del nodo<a class="anchor" aria-label="anchor" href="#impureza-del-nodo"><i class="fas fa-link"></i></a>
 </h3>
 <p>La impureza del nodo es una métrica que mide la impureza de los datos en un nodo. Existen distintos tipos de impureza, como la entropía, el índice Gini o el error de clasificación. Cada uno de estos se mide de manera diferente aunque su objetivo es el mismo, medir que tan mezclados están los datos respecto a sus atributos.</p>
 </div>
 </div>
-<div id="usos-del-algoritmo" class="section level2" number="5.5">
+<div id="usos-del-algoritmo" class="section level2" number="6.5">
 <h2>
-<span class="header-section-number">5.5</span> Usos del algoritmo<a class="anchor" aria-label="anchor" href="#usos-del-algoritmo"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.5</span> Usos del algoritmo<a class="anchor" aria-label="anchor" href="#usos-del-algoritmo"><i class="fas fa-link"></i></a>
 </h2>
 <p>Una de las ventajas de los árboles de decisión es que son robustos ante la presencia de ruidos o errores en los conjuntos de entrenamiento, lo que los hace útiles en situaciones en las que los datos pueden no ser completamente precisos. Además, los árboles de decisión son una herramienta adaptable, de ejecución rápida y fáciles de interpretar por humanos, lo que los hace útiles en una amplia gama de aplicaciones, algunos ejemplos de sus usos son:</p>
 <p>MEJORAR</p>
@@ -174,9 +176,9 @@ Es un algoritmo muy noble, ya que permite tanto la entrada como salida de variab
 </tbody>
 </table></div>
 </div>
-<div id="los-algoritmos-de-árboles" class="section level2" number="5.6">
+<div id="los-algoritmos-de-árboles" class="section level2" number="6.6">
 <h2>
-<span class="header-section-number">5.6</span> Los algoritmos de árboles<a class="anchor" aria-label="anchor" href="#los-algoritmos-de-%C3%A1rboles"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.6</span> Los algoritmos de árboles<a class="anchor" aria-label="anchor" href="#los-algoritmos-de-%C3%A1rboles"><i class="fas fa-link"></i></a>
 </h2>
 <p>Es importante aclarar que no existe un único algoritmo capaz de realizar árboles de decisión, existen diferentes métodos y librerías que nos permiten realizarlo, cada una con sus ventajas y desventajas asociadas, algunos de los algoritmos desarrollados mas difundidos son:</p>
 <p>COMPLETAR</p>
@@ -213,12 +215,12 @@ Es un algoritmo muy noble, ya que permite tanto la entrada como salida de variab
 </tbody>
 </table></div>
 </div>
-<div id="poda-y-sobreajuste" class="section level2" number="5.7">
+<div id="poda-y-sobreajuste" class="section level2" number="6.7">
 <h2>
-<span class="header-section-number">5.7</span> Poda y sobreajuste<a class="anchor" aria-label="anchor" href="#poda-y-sobreajuste"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.7</span> Poda y sobreajuste<a class="anchor" aria-label="anchor" href="#poda-y-sobreajuste"><i class="fas fa-link"></i></a>
 </h2>
 <p>En la explicación sobre los algoritmos de árboles de decisión explicamos que estos se continúan subdividiendo hasta lograr lo "suficiente como para predecir un resultado". Sin embargo, esto no siempre es así, de hecho, algunos algoritmos continúan subdividiéndose hasta que solo quedan hojas o hasta que ya no hay más atributos que utilizar. Pero, ¿realmente todas las subdivisiones son útiles para predecir?</p>
-<p>Además, como se mencionó en la <a href="index.html#introducci%C3%B3n-a-los-algoritmos">introducción a los algoritmos</a>, para trabajar con este algoritmo primero se debe construir los conjuntos de <em>entrenamiento</em> y <em>prueba</em>.</p>
+<p>Además, como se mencionó en la <a href="introducci%C3%B3n-a-los-algoritmos.html#introducci%C3%B3n-a-los-algoritmos">introducción a los algoritmos</a>, para trabajar con este algoritmo primero se debe construir los conjuntos de <em>entrenamiento</em> y <em>prueba</em>.</p>
 <p>Es aquí donde se vuelve valioso haber utilizado estos conjuntos. Al comparar el árbol obtenido al utilizar el conjunto de entrenamiento con los datos de prueba, se pueden eliminar todas las subdivisiones que no cumplan con los estándares de calidad.</p>
 <p>Estas subdivisiones que no aportan valor predictivo y no cumplen con los estándares de calidad se denominan sobreajuste. Es decir, se enfocan en cualidades casuales de la muestra que no representan el universo del que provienen. El proceso de eliminar estas subdivisiones se llama poda y se puede clasificar en:</p>
 <ul>
@@ -230,20 +232,20 @@ Es un algoritmo muy noble, ya que permite tanto la entrada como salida de variab
 <strong>Re-estructuración</strong>: Cuando se trabaja con árboles de decisión, a veces puede ocurrir que el conjunto de casos no sea conocido desde el principio, sino que se van conociendo en el tiempo. En estos casos, puede ser conveniente empezar la división de una manera distinta a la que se hubiera hecho si se conociera todo el conjunto de antemano. Este proceso permite modificar la estructura del árbol a medida que se van obteniendo nuevos datos.</li>
 </ul>
 </div>
-<div id="ejercicios" class="section level2" number="5.8">
+<div id="ejercicios" class="section level2" number="6.8">
 <h2>
-<span class="header-section-number">5.8</span> Ejercicios<a class="anchor" aria-label="anchor" href="#ejercicios"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.8</span> Ejercicios<a class="anchor" aria-label="anchor" href="#ejercicios"><i class="fas fa-link"></i></a>
 </h2>
-<div id="ejercicio-1" class="section level3" number="5.8.1">
+<div id="ejercicio-1" class="section level3" number="6.8.1">
 <h3>
-<span class="header-section-number">5.8.1</span> Ejercicio 1<a class="anchor" aria-label="anchor" href="#ejercicio-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.8.1</span> Ejercicio 1<a class="anchor" aria-label="anchor" href="#ejercicio-1"><i class="fas fa-link"></i></a>
 </h3>
 <p>Para comenzar con los ejercicios utilizaremos la librería <code>rpart</code> que crea, a partír de un conjunto de datos, un árbol de decisión que puede utilizarse para pronosticar con la función <code><a href="https://rdrr.io/r/stats/predict.html">predict()</a></code>. Para ello primero descarga el dataset de la clase <a href="files/people.csv" descargar>Descarga el archivo aquí</a></p>
 <blockquote>
 <p>El dataset que utilizaremos es una colección observaciones sobre la altura de personas, el objetivo del ejercicio es poder utilizar los atributos para aprender a predecir.</p>
 </blockquote>
 <p>Una vez descargado el archivo procedemos a leerlo, utilizamos a función <code>read.csv</code> y lo almacenamos en una variable, a continuación veamos la estructura del dataset utilizando <code><a href="https://rdrr.io/r/utils/str.html">str()</a></code></p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Cambiamos el path a la dirección en donde se encuentra nuestro archivo</span></span>
 <span><span class="va">read_csv</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"path/to/file.csv"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">read_csv</span><span class="op">)</span></span></code></pre></div>
@@ -261,7 +263,7 @@ Es un algoritmo muy noble, ya que permite tanto la entrada como salida de variab
 </ul>
 <p>Entonces ya sabemos de que se trata el dataset, es una tabla que indica la altura de dos padres y el género y altura de su hijo, nuestro objetivo es ver la relación que existe entre estos valores.</p>
 <p>Comenzamos por cambiar los valores de <code>s.hijo</code> de carácteres a factores</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">read_csv</span><span class="op">$</span><span class="va">s.hijo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">read_csv</span><span class="op">$</span><span class="va">s.hijo</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">read_csv</span><span class="op">)</span></span></code></pre></div>
 <pre><code>## 'data.frame':    1000 obs. of  4 variables:
@@ -470,26 +472,26 @@ window.onload = function() {
 }
 
 </script><div class="chapter-nav">
-<div class="prev"><a href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-2.html"><span class="header-section-number">4</span> Elementos de probabilidad y estadística - Parte 2</a></div>
-<div class="next"><a href="algoritmos-de-agrupamiento.html"><span class="header-section-number">6</span> Algoritmos de agrupamiento</a></div>
+<div class="prev"><a href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-2.html"><span class="header-section-number">5</span> Elementos de probabilidad y estadística - Parte 2</a></div>
+<div class="next"><a href="algoritmos-de-agrupamiento.html"><span class="header-section-number">7</span> Algoritmos de agrupamiento</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>Contenido del capítulo</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#%C3%A1rboles-de-decisi%C3%B3n"><span class="header-section-number">5</span> Árboles de decisión</a></li>
-<li><a class="nav-link" href="#que-son"><span class="header-section-number">5.1</span> ¿Que son?</a></li>
-<li><a class="nav-link" href="#partes-del-%C3%A1rbol"><span class="header-section-number">5.2</span> Partes del árbol</a></li>
-<li><a class="nav-link" href="#partes-del-%C3%A1rbol-1"><span class="header-section-number">5.3</span> Partes del árbol</a></li>
+<li><a class="nav-link" href="#%C3%A1rboles-de-decisi%C3%B3n"><span class="header-section-number">6</span> Árboles de decisión</a></li>
+<li><a class="nav-link" href="#que-son"><span class="header-section-number">6.1</span> ¿Que son?</a></li>
+<li><a class="nav-link" href="#partes-del-%C3%A1rbol"><span class="header-section-number">6.2</span> Partes del árbol</a></li>
+<li><a class="nav-link" href="#partes-del-%C3%A1rbol-1"><span class="header-section-number">6.3</span> Partes del árbol</a></li>
 <li>
-<a class="nav-link" href="#las-m%C3%A9tricas-de-decisi%C3%B3n"><span class="header-section-number">5.4</span> Las métricas de decisión</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#ganancia-de-informaci%C3%B3n"><span class="header-section-number">5.4.1</span> Ganancia de información</a></li>
-<li><a class="nav-link" href="#impureza-del-nodo"><span class="header-section-number">5.4.2</span> Impureza del nodo</a></li>
+<a class="nav-link" href="#las-m%C3%A9tricas-de-decisi%C3%B3n"><span class="header-section-number">6.4</span> Las métricas de decisión</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ganancia-de-informaci%C3%B3n"><span class="header-section-number">6.4.1</span> Ganancia de información</a></li>
+<li><a class="nav-link" href="#impureza-del-nodo"><span class="header-section-number">6.4.2</span> Impureza del nodo</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#usos-del-algoritmo"><span class="header-section-number">5.5</span> Usos del algoritmo</a></li>
-<li><a class="nav-link" href="#los-algoritmos-de-%C3%A1rboles"><span class="header-section-number">5.6</span> Los algoritmos de árboles</a></li>
-<li><a class="nav-link" href="#poda-y-sobreajuste"><span class="header-section-number">5.7</span> Poda y sobreajuste</a></li>
+<li><a class="nav-link" href="#usos-del-algoritmo"><span class="header-section-number">6.5</span> Usos del algoritmo</a></li>
+<li><a class="nav-link" href="#los-algoritmos-de-%C3%A1rboles"><span class="header-section-number">6.6</span> Los algoritmos de árboles</a></li>
+<li><a class="nav-link" href="#poda-y-sobreajuste"><span class="header-section-number">6.7</span> Poda y sobreajuste</a></li>
 <li>
-<a class="nav-link" href="#ejercicios"><span class="header-section-number">5.8</span> Ejercicios</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#ejercicio-1"><span class="header-section-number">5.8.1</span> Ejercicio 1</a></li></ul>
+<a class="nav-link" href="#ejercicios"><span class="header-section-number">6.8</span> Ejercicios</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#ejercicio-1"><span class="header-section-number">6.8.1</span> Ejercicio 1</a></li></ul>
 </li>
 </ul>
 
@@ -508,7 +510,7 @@ window.onload = function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Circular R</strong>" ha sido escrito por Instituto Data Science Argentina. Última actualización: 2023-05-03.</p>
+    <p>"<strong>Circular R</strong>" ha sido escrito por Instituto Data Science Argentina. Última actualización: 2023-05-06.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

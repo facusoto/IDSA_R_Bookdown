@@ -4,13 +4,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Capítulo 2 Diseño y construcción de un almacén de datos | Circular R</title>
+<title>Capítulo 3 Diseño y construcción de un almacén de datos | Circular R</title>
 <meta name="author" content="Instituto Data Science Argentina">
 <meta name="generator" content="bookdown 0.33 with bs4_book()">
-<meta property="og:title" content="Capítulo 2 Diseño y construcción de un almacén de datos | Circular R">
+<meta property="og:title" content="Capítulo 3 Diseño y construcción de un almacén de datos | Circular R">
 <meta property="og:type" content="book">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Capítulo 2 Diseño y construcción de un almacén de datos | Circular R">
+<meta name="twitter:title" content="Capítulo 3 Diseño y construcción de un almacén de datos | Circular R">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.2/transition.js"></script><script src="libs/bs3compat-0.4.2/tabs.js"></script><script src="libs/bs3compat-0.4.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -18,9 +18,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="include/psyteachr.css">
 <link rel="stylesheet" href="include/webex.css">
 <link rel="stylesheet" href="include/style.css">
-<meta name="description" content="2.1 Antecedentes Las organizaciones en general y las empresas en particular vienen generando crecientes volúmenes de datos, desde los tiempos en que las buenas prácticas ponían foco especialmente...">
-<meta property="og:description" content="2.1 Antecedentes Las organizaciones en general y las empresas en particular vienen generando crecientes volúmenes de datos, desde los tiempos en que las buenas prácticas ponían foco especialmente...">
-<meta name="twitter:description" content="2.1 Antecedentes Las organizaciones en general y las empresas en particular vienen generando crecientes volúmenes de datos, desde los tiempos en que las buenas prácticas ponían foco especialmente...">
+<meta name="description" content="3.1 Antecedentes Las organizaciones en general y las empresas en particular vienen generando crecientes volúmenes de datos, desde los tiempos en que las buenas prácticas ponían foco especialmente...">
+<meta property="og:description" content="3.1 Antecedentes Las organizaciones en general y las empresas en particular vienen generando crecientes volúmenes de datos, desde los tiempos en que las buenas prácticas ponían foco especialmente...">
+<meta name="twitter:description" content="3.1 Antecedentes Las organizaciones en general y las empresas en particular vienen generando crecientes volúmenes de datos, desde los tiempos en que las buenas prácticas ponían foco especialmente...">
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -42,14 +42,16 @@
 
       <nav aria-label="Table of contents"><h2>Tabla de contenido</h2>
         <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html"><span class="header-section-number">1</span> Introducción a los algoritmos</a></li>
-<li><a class="active" href="dise%C3%B1o-y-construcci%C3%B3n-de-un-almac%C3%A9n-de-datos.html"><span class="header-section-number">2</span> Diseño y construcción de un almacén de datos</a></li>
-<li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-1.html"><span class="header-section-number">3</span> Elementos de probabilidad y estadística - Parte 1</a></li>
-<li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-2.html"><span class="header-section-number">4</span> Elementos de probabilidad y estadística - Parte 2</a></li>
-<li><a class="" href="%C3%A1rboles-de-decisi%C3%B3n.html"><span class="header-section-number">5</span> Árboles de decisión</a></li>
-<li><a class="" href="algoritmos-de-agrupamiento.html"><span class="header-section-number">6</span> Algoritmos de agrupamiento</a></li>
-<li><a class="" href="reglas-de-asociaci%C3%B3n.html"><span class="header-section-number">7</span> Reglas de asociación</a></li>
-<li><a class="" href="series_temporales.html"><span class="header-section-number">8</span> Series temporales</a></li>
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Te damos la bienvenida</a></li>
+<li><a class="" href="introducci%C3%B3n-a-los-algoritmos.html"><span class="header-section-number">2</span> Introducción a los algoritmos</a></li>
+<li><a class="active" href="dise%C3%B1o-y-construcci%C3%B3n-de-un-almac%C3%A9n-de-datos.html"><span class="header-section-number">3</span> Diseño y construcción de un almacén de datos</a></li>
+<li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-1.html"><span class="header-section-number">4</span> Elementos de probabilidad y estadística - Parte 1</a></li>
+<li><a class="" href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-2.html"><span class="header-section-number">5</span> Elementos de probabilidad y estadística - Parte 2</a></li>
+<li><a class="" href="%C3%A1rboles-de-decisi%C3%B3n.html"><span class="header-section-number">6</span> Árboles de decisión</a></li>
+<li><a class="" href="algoritmos-de-agrupamiento.html"><span class="header-section-number">7</span> Algoritmos de agrupamiento</a></li>
+<li><a class="" href="reglas-de-asociaci%C3%B3n.html"><span class="header-section-number">8</span> Reglas de asociación</a></li>
+<li><a class="" href="redes-neuronales.html"><span class="header-section-number">9</span> Redes neuronales</a></li>
+<li><a class="" href="series_temporales.html"><span class="header-section-number">10</span> Series temporales</a></li>
 </ul>
 
         <div class="book-extra">
@@ -57,13 +59,13 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="diseño-y-construcción-de-un-almacén-de-datos" class="section level1" number="2">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="diseño-y-construcción-de-un-almacén-de-datos" class="section level1" number="3">
 <h1>
-<span class="header-section-number">Capítulo 2</span> Diseño y construcción de un almacén de datos<a class="anchor" aria-label="anchor" href="#dise%C3%B1o-y-construcci%C3%B3n-de-un-almac%C3%A9n-de-datos"><i class="fas fa-link"></i></a>
+<span class="header-section-number">Capítulo 3</span> Diseño y construcción de un almacén de datos<a class="anchor" aria-label="anchor" href="#dise%C3%B1o-y-construcci%C3%B3n-de-un-almac%C3%A9n-de-datos"><i class="fas fa-link"></i></a>
 </h1>
-<div id="antecedentes" class="section level2" number="2.1">
+<div id="antecedentes" class="section level2" number="3.1">
 <h2>
-<span class="header-section-number">2.1</span> Antecedentes<a class="anchor" aria-label="anchor" href="#antecedentes"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.1</span> Antecedentes<a class="anchor" aria-label="anchor" href="#antecedentes"><i class="fas fa-link"></i></a>
 </h2>
 <p>Las organizaciones en general y las empresas en particular vienen generando crecientes volúmenes de datos, desde los tiempos en que las buenas prácticas ponían foco <strong>especialmente</strong> en asegurar el ahorro de espacio de almacenamiento ya que en aquél entonces los precios del espacio de almacenamiento eran prohibitivamente caros y se buscaba reducir la cantidad de datos y aumentar la eficiencia mediante el úso de las formas normales.</p>
 <p>El cambio en los precios de almacenamiento y el creciente enfoque en el análisis de los datos vieron consigo un cambio en la forma de almacenar los datos, pasando de una organización utilizando sistemas transaccionales como CRM y LRP al Data warehouse. Esto trajo consigo un enfoque de <strong>desnormalización</strong> en los datos a almacenar, lo que quiere decir que mantuvo la redundancia de datos que son de grán valor para su análisis.</p>
@@ -87,9 +89,9 @@ Esto no ocurre con el DW ya que, desde esta perspectiva, la historia del cliente
 <p>Muchos esfuerzos de análisis se estrellaron contra estos problemas. La lección duramente aprendida es que antes de aplicar las herramientas analíticas es preciso preparar los datos.
 Lo que quiere decir que primero hay que eliminar los patrones de ruido, esas inconsistencias de las que hablamos.</p>
 </div>
-<div id="resumiendo" class="section level2" number="2.2">
+<div id="resumiendo" class="section level2" number="3.2">
 <h2>
-<span class="header-section-number">2.2</span> Resumiendo<a class="anchor" aria-label="anchor" href="#resumiendo"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.2</span> Resumiendo<a class="anchor" aria-label="anchor" href="#resumiendo"><i class="fas fa-link"></i></a>
 </h2>
 <p>Las principales diferencias entre los sistemas transaccionales y los almacenes de datos son la velocidad, el espacio en disco y el propósito de uso.
 Los sistemas transaccionales están diseñados para realizar operaciones como insert, delete y update lo más rápido posible.
@@ -123,9 +125,9 @@ Por su parte el DW está optimizado para ejecutar select masivos mucho más ráp
 </tbody>
 </table></div>
 </div>
-<div id="arquitectura-de-un-almacén-de-datos" class="section level2" number="2.3">
+<div id="arquitectura-de-un-almacén-de-datos" class="section level2" number="3.3">
 <h2>
-<span class="header-section-number">2.3</span> Arquitectura de un almacén de datos<a class="anchor" aria-label="anchor" href="#arquitectura-de-un-almac%C3%A9n-de-datos"><i class="fas fa-link"></i></a>
+<span class="header-section-number">3.3</span> Arquitectura de un almacén de datos<a class="anchor" aria-label="anchor" href="#arquitectura-de-un-almac%C3%A9n-de-datos"><i class="fas fa-link"></i></a>
 </h2>
 <p>A pesar de lo mencionado anteriormente, es importante aclarar que los almacenes de datos (o DW) no necesariamente representan una diferencia para el usuario final u operador, ya que en la mayoría de los casos, el sistema OLTP (o sistema transaccional) continúa siendo utilizado como fuente de datos; a su vez el DW almacena de forma redundante la información del OLTP con el objetivo de análisis y consulta de datos.</p>
 <p>Entonces, un almacén de datos se integra por:</p>
@@ -339,15 +341,15 @@ window.onload = function() {
 }
 
 </script><div class="chapter-nav">
-<div class="prev"><a href="index.html"><span class="header-section-number">1</span> Introducción a los algoritmos</a></div>
-<div class="next"><a href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-1.html"><span class="header-section-number">3</span> Elementos de probabilidad y estadística - Parte 1</a></div>
+<div class="prev"><a href="introducci%C3%B3n-a-los-algoritmos.html"><span class="header-section-number">2</span> Introducción a los algoritmos</a></div>
+<div class="next"><a href="elementos-de-probabilidad-y-estad%C3%ADstica---parte-1.html"><span class="header-section-number">4</span> Elementos de probabilidad y estadística - Parte 1</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>Contenido del capítulo</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#dise%C3%B1o-y-construcci%C3%B3n-de-un-almac%C3%A9n-de-datos"><span class="header-section-number">2</span> Diseño y construcción de un almacén de datos</a></li>
-<li><a class="nav-link" href="#antecedentes"><span class="header-section-number">2.1</span> Antecedentes</a></li>
-<li><a class="nav-link" href="#resumiendo"><span class="header-section-number">2.2</span> Resumiendo</a></li>
-<li><a class="nav-link" href="#arquitectura-de-un-almac%C3%A9n-de-datos"><span class="header-section-number">2.3</span> Arquitectura de un almacén de datos</a></li>
+<li><a class="nav-link" href="#dise%C3%B1o-y-construcci%C3%B3n-de-un-almac%C3%A9n-de-datos"><span class="header-section-number">3</span> Diseño y construcción de un almacén de datos</a></li>
+<li><a class="nav-link" href="#antecedentes"><span class="header-section-number">3.1</span> Antecedentes</a></li>
+<li><a class="nav-link" href="#resumiendo"><span class="header-section-number">3.2</span> Resumiendo</a></li>
+<li><a class="nav-link" href="#arquitectura-de-un-almac%C3%A9n-de-datos"><span class="header-section-number">3.3</span> Arquitectura de un almacén de datos</a></li>
 </ul>
 
       <div class="book-extra">
@@ -365,7 +367,7 @@ window.onload = function() {
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Circular R</strong>" ha sido escrito por Instituto Data Science Argentina. Última actualización: 2023-05-03.</p>
+    <p>"<strong>Circular R</strong>" ha sido escrito por Instituto Data Science Argentina. Última actualización: 2023-05-06.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

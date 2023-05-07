@@ -1,5 +1,6 @@
+te-damos-la-bienvenida
+curso-circular
 introducción-a-los-algoritmos
-prueba-chunks
 diseño-y-construcción-de-un-almacén-de-datos
 antecedentes
 resumiendo
@@ -52,6 +53,7 @@ lift
 matriz-de-interés
 apriori
 casos-de-uso
+redes-neuronales
 series_temporales
 que-son-1
 clasificaciones-de-las-series-temporales

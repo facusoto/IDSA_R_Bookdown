@@ -7,6 +7,10 @@
 		- *Entrada*: Variables ordenadas en el tiempo
 		- *Salida*: Valores futuros - Predicción
 
+<div class="warning">
+<p>Antes de comenzar con el estudio y práctica de algoritmos te recomendamos leer el capítulo de [introducción a los algoritmos]</p>
+</div>
+
 ## ¿Que son?
 
 Una serie temporal es una colección de observaciones de una variable aleatoria tomadas en forma secuencial a medida que transcurre el tiempo.
